@@ -675,6 +675,16 @@
       "role": "PARENT",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
       "lastLogin": null
+    },
+    {
+      "id": "usr-teacher-1",
+      "name": "Mrs. Priya Sharma",
+      "email": "teacher@vannam.edu",
+      "password": "Teacher@Vannam2026",
+      "role": "TEACHER",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&q=80",
+      "teacherId": "priya-sharma",
+      "lastLogin": "2026-08-29T09:00:00Z"
     }
   ],
   "auditLogs": [
