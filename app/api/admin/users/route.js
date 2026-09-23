@@ -1,8 +1,21 @@
 import { NextResponse } from 'next/server';
 import { getStore, saveStore } from '@/lib/dataStore';
+import { verifySessionToken } from '@/lib/auth';
 import pool from '@/lib/db';
 
 function getSessionUser(request) {
+  // 1. Try signed JWT session token (vannam_session)
+  try {
+    const jwtCookie = request.cookies.get('vannam_session');
+    if (jwtCookie?.value) {
+      const decoded = verifySessionToken(jwtCookie.value);
+      if (decoded && decoded.id) {
+        return decoded;
+      }
+    }
+  } catch (_) {}
+
+  // 2. Fallback to client layout cookie (vannam_admin_session)
   try {
     const adminSessionCookie = request.cookies.get('vannam_admin_session');
     if (adminSessionCookie?.value) {
@@ -90,6 +103,30 @@ export async function POST(request) {
       avatar: avatar || 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80',
       lastLogin: null
     };
+
+    // Ensure teacher record exists in store.teachers if role is TEACHER
+    if ((newUser.role || '').toUpperCase() === 'TEACHER') {
+      const existingTeacher = (store.teachers || []).find(
+        (t) => t.email?.toLowerCase() === newUser.email.toLowerCase()
+      );
+      if (!existingTeacher) {
+        const newTeacherRecord = {
+          id: `teacher-${Date.now()}`,
+          name: newUser.name,
+          email: newUser.email,
+          role: 'Lead Educator',
+          experience: '5+ Years',
+          qualifications: 'AMI Montessori Certified',
+          bio: 'Early childhood educator committed to developmental exploration and child care.',
+          image: newUser.avatar,
+          active: true
+        };
+        store.teachers = [...(store.teachers || []), newTeacherRecord];
+        newUser.teacherId = newTeacherRecord.id;
+      } else {
+        newUser.teacherId = existingTeacher.id;
+      }
+    }
 
     store.users = [...(store.users || []), newUser];
     saveStore(store, {
@@ -227,6 +264,20 @@ export async function DELETE(request) {
 
     if (!targetUser) {
       return NextResponse.json({ error: 'User not found' }, { status: 404 });
+    }
+
+    // Safety 1: Prevent user from deleting their own active session account
+    if (sessionUser && (targetUser.id === sessionUser.id || (targetUser.email || '').toLowerCase() === (sessionUser.email || '').toLowerCase())) {
+      return NextResponse.json({
+        error: 'Safety restriction: You cannot delete your own active administrator account.'
+      }, { status: 400 });
+    }
+
+    // Safety 2: Protect primary system administrator account
+    if (targetUser.email?.toLowerCase() === 'admin@vannam.edu') {
+      return NextResponse.json({
+        error: 'System restriction: The primary system administrator account (admin@vannam.edu) cannot be deleted.'
+      }, { status: 400 });
     }
 
     store.users = (store.users || []).filter(u => u.id !== id);

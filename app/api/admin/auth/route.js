@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getStore, saveStore } from '@/lib/dataStore';
-import { signSessionToken } from '@/lib/auth';
+import { signSessionToken, verifySessionToken } from '@/lib/auth';
 
 export async function POST(request) {
   try {
@@ -154,30 +154,49 @@ export async function POST(request) {
 
 export async function GET(request) {
   try {
-    const cookie = request.cookies.get('vannam_admin_session');
-    if (!cookie || !cookie.value) {
-      return NextResponse.json({ authenticated: false }, { status: 401 });
+    let sessionUser = null;
+
+    // 1. First try verifying signed JWT session token (vannam_session)
+    const jwtCookie = request.cookies.get('vannam_session');
+    if (jwtCookie?.value) {
+      sessionUser = verifySessionToken(jwtCookie.value);
     }
 
-    const sessionUser = typeof cookie.value === 'string' && cookie.value.startsWith('{')
-      ? JSON.parse(cookie.value)
-      : null;
+    // 2. Fallback to vannam_admin_session cookie
+    if (!sessionUser) {
+      const cookie = request.cookies.get('vannam_admin_session');
+      if (cookie?.value && typeof cookie.value === 'string' && cookie.value.startsWith('{')) {
+        try {
+          sessionUser = JSON.parse(cookie.value);
+        } catch (_) {}
+      }
+    }
 
     if (!sessionUser) {
       return NextResponse.json({ authenticated: false }, { status: 401 });
     }
 
     const store = getStore();
-    const user = (store.users || []).find((u) => u.id === sessionUser.id || u.email === sessionUser.email);
+    const cleanSessionEmail = (sessionUser.email || '').trim().toLowerCase();
+    const user = (store.users || []).find(
+      (u) => u.id === sessionUser.id || (u.email || '').trim().toLowerCase() === cleanSessionEmail
+    );
 
     if (!user) {
+      // If user session is valid JWT, return sessionUser safely rather than kicking them out
+      if (sessionUser.id && sessionUser.role) {
+        return NextResponse.json({
+          authenticated: true,
+          user: sessionUser
+        });
+      }
       return NextResponse.json({ authenticated: false }, { status: 401 });
     }
 
     let teacherProfile = null;
     if (user.role === 'TEACHER' || user.teacherId) {
       teacherProfile = (store.teachers || []).find(
-        (t) => t.id === user.teacherId || t.email?.toLowerCase() === user.email.toLowerCase()
+        (t) => t.id === user.teacherId || t.email?.toLowerCase() === user.email?.toLowerCase()
       ) || null;
     }
 

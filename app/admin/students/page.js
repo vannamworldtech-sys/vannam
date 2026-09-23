@@ -388,12 +388,12 @@ export default function StudentsManager() {
       {deleteConfirmId && (
         <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl border border-slate-200 animate-in fade-in zoom-in-95">
-            <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
               <AlertCircle className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900">Archive Student / Revoke Access?</h3>
+            <h3 className="text-lg font-bold text-slate-900">Archive Student?</h3>
             <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-              This student will be removed from active classroom rosters. If the family has no other active children enrolled, their Parent Portal login access will be automatically revoked.
+              This student will be removed from active classroom rosters and attendance sheets. Parent account credentials will remain securely saved in Accounts & Credentials.
             </p>
             <div className="flex items-center justify-end gap-2.5 mt-6">
               <button
@@ -404,9 +404,9 @@ export default function StudentsManager() {
               </button>
               <button
                 onClick={() => handleDeleteStudent(deleteConfirmId)}
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-rose-600 hover:bg-rose-700 text-white shadow-md transition cursor-pointer"
+                className="px-4 py-2 rounded-xl text-xs font-bold bg-amber-600 hover:bg-amber-700 text-white shadow-md transition cursor-pointer"
               >
-                Archive & Revoke
+                Archive Student
               </button>
             </div>
           </div>

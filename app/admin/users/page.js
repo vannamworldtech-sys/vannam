@@ -200,12 +200,26 @@ export default function UsersManager() {
       return;
     }
 
+    if (isSelf(user)) {
+      showToast('Safety restriction: You cannot delete your own active administrator account.', 'error');
+      return;
+    }
+
+    if (user.email?.toLowerCase() === 'admin@vannam.edu') {
+      showToast('The primary system administrator account (admin@vannam.edu) cannot be deleted.', 'error');
+      return;
+    }
+
     if (user.role === 'ADMIN' && users.filter((u) => u.role === 'ADMIN' || u.role === 'super_admin').length <= 1) {
       showToast('Cannot delete the last administrator account!', 'error');
       return;
     }
 
-    if (!confirm(`Are you sure you want to delete credentials for "${user.name}" (${user.email})?`)) {
+    const confirmMsg = user.role === 'PARENT'
+      ? `Are you sure you want to delete login credentials for parent "${user.name}" (${user.email})? Note: Any enrolled student records will remain safely saved.`
+      : `Are you sure you want to delete administrator credentials for "${user.name}" (${user.email})?`;
+
+    if (!confirm(confirmMsg)) {
       return;
     }
 

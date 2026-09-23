@@ -31,23 +31,41 @@ export async function GET() {
       rejected: admissions.filter((a) => a.status === 'rejected').length
     };
 
+    const students = store.students || [];
+    const classes = store.classes || [];
+    const teachers = store.teachers || [];
+    const activities = store.activities || [];
+    const attendance = store.attendance || [];
+
+    // Computed summary stats for dashboard cards
+    const stats = {
+      totalStudents: students.filter(s => s.status !== 'Archived').length,
+      totalClasses: classes.length,
+      totalTeachers: teachers.length,
+      totalActivities: activities.length,
+      totalAttendance: attendance.length,
+      totalEnquiries: enquiries.length,
+      totalAdmissions: admissions.length
+    };
+
     // Return everything in one single fast consolidated JSON payload
     return NextResponse.json(
       {
         success: true,
+        stats,
         enquiries,
         enquiryStats,
         admissions,
         admissionStats,
         programs: store.programs || [],
-        teachers: store.teachers || [],
+        teachers,
         gallery: store.gallery || [],
         announcements: store.announcements || [],
         logs: store.auditLogs || [],
-        students: store.students || [],
-        classes: store.classes || [],
-        activities: store.activities || [],
-        attendance: store.attendance || []
+        students,
+        classes,
+        activities,
+        attendance
       },
       {
         headers: {

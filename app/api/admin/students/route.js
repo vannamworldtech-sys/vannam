@@ -245,43 +245,26 @@ export async function DELETE(request) {
 
     const parentEmail = student.parentEmail?.trim().toLowerCase();
 
-    // Remove student
+    // Remove student from roster
     store.students = (store.students || []).filter(s => s.id !== id);
-
-    // Multi-child check: Does the parent have any OTHER enrolled student in school?
-    const hasOtherChildren = (store.students || []).some(
-      s => s.parentEmail?.trim().toLowerCase() === parentEmail
-    );
-
-    let parentAccessRevoked = false;
-    if (!hasOtherChildren && parentEmail) {
-      // Remove parent login credentials from users store
-      store.users = (store.users || []).filter(
-        u => u.email?.trim().toLowerCase() !== parentEmail
-      );
-      parentAccessRevoked = true;
-    }
 
     saveStore(store, {
       action: 'Archive Student',
       resource: 'Students',
-      details: `Archived student record: ${student.name} (${student.studentId}). ${parentAccessRevoked ? `Parent credentials for ${parentEmail} revoked.` : `Parent credentials remain active for other enrolled child(ren).`}`
+      details: `Archived student record: ${student.name} (${student.studentId}). Parent login credentials preserved.`
     });
 
     // Sync to Neon PostgreSQL
     try {
       await pool.query('DELETE FROM students WHERE id = $1;', [id]);
-      if (parentAccessRevoked && parentEmail) {
-        await pool.query("DELETE FROM users WHERE LOWER(email) = LOWER($1) AND role = 'PARENT';", [parentEmail]);
-      }
     } catch (neonErr) {
       console.warn("Neon sync note (DELETE student):", neonErr.message);
     }
 
     return NextResponse.json({
       success: true,
-      message: 'Student archived successfully',
-      parentAccessRevoked
+      message: 'Student archived successfully. Parent account preserved.',
+      parentAccessRevoked: false
     });
   } catch (error) {
     return NextResponse.json({ error: error.message || 'Failed to delete student' }, { status: 500 });

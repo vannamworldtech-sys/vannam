@@ -20,14 +20,14 @@ export async function POST(request) {
     const users = store.users || [];
     const students = store.students || [];
 
-    // 1. Check parent in users list (synced with Neon DB "users" table)
-    const matchedUser = users.find(
+    // Check if an Admin or Staff account is trying to log into the Parent Portal
+    const staffUser = users.find(
       (u) =>
         u.email?.toLowerCase() === cleanEmail &&
-        (u.role === 'PARENT' || u.role === 'ADMIN' || u.role === 'super_admin')
+        (u.role === 'ADMIN' || u.role === 'super_admin' || u.role === 'TEACHER')
     );
 
-    // 2. Check student record matching parentEmail, studentId, or phone
+    // Check student records matching parentEmail, studentId, or phone
     const matchedStudents = students.filter(
       (s) =>
         s.parentEmail?.toLowerCase() === cleanEmail ||
@@ -35,19 +35,39 @@ export async function POST(request) {
         (s.parentPhone && s.parentPhone.includes(cleanEmail))
     );
 
+    // If an Admin/Teacher account tries to log in AND has no enrolled child, block access
+    if (staffUser && matchedStudents.length === 0) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Access denied: This portal is for parents only. School staff and administrators must sign in at the Admin Portal (/admin/login).'
+        },
+        { status: 403 }
+      );
+    }
+
+    // 1. Check parent or teacher-parent in users list
+    const matchedUser = users.find(
+      (u) => u.email?.toLowerCase() === cleanEmail
+    );
+
     let isValid = false;
     let parentName = 'Parent';
     let matchedChildId = null;
 
+    // Check student PIN if any child is matched
+    const studentPin = matchedStudents.length > 0 ? (matchedStudents[0].parentPin || '2026') : null;
+
     if (matchedUser) {
-      // Validate password against user record in Neon DB
+      // Validate password against user record or student PIN
       if (
         matchedUser.password === cleanPin ||
         matchedUser.passwordHash === cleanPin ||
+        cleanPin === studentPin ||
         cleanPin === '2026'
       ) {
         isValid = true;
-        parentName = matchedUser.name || 'Parent';
+        parentName = matchedUser.name || (matchedStudents[0]?.parentName) || 'Parent';
         if (matchedStudents.length > 0) {
           matchedChildId = matchedStudents[0].id;
         }
@@ -77,6 +97,7 @@ export async function POST(request) {
       success: true,
       parentName,
       matchedChildId,
+      hasChildren: matchedStudents.length > 0,
       email: cleanEmail
     });
   } catch (error) {

@@ -640,13 +640,13 @@
   },
   "users": [
     {
-      "id": "usr-parent-demo",
-      "name": "Andrew Vance (Parent)",
-      "email": "andrew@vannamworld.edu",
-      "password": "2026",
-      "role": "PARENT",
-      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
-      "lastLogin": null
+      "id": "usr-1",
+      "name": "nithish",
+      "email": "admin@vannam.edu",
+      "password": "Admin@Vannam2026",
+      "role": "ADMIN",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&q=80",
+      "lastLogin": "2026-09-23T09:11:45.794Z"
     },
     {
       "id": "usr-1790054256280",
@@ -655,649 +655,928 @@
       "password": "nithish",
       "role": "ADMIN",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
-      "lastLogin": null,
+      "lastLogin": "2026-09-23T04:21:30.141Z",
       "phone": "8220230896"
+    },
+    {
+      "id": "usr-1790151325368",
+      "name": "kavitha",
+      "email": "kavitha.teacher@vannam.edu",
+      "password": "k",
+      "role": "ADMIN",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
+      "lastLogin": null
+    },
+    {
+      "id": "usr-1790155105216",
+      "name": "gokul",
+      "email": "gokul@gmail.com",
+      "password": "2026",
+      "role": "PARENT",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&q=80",
+      "lastLogin": null
     }
   ],
   "auditLogs": [
     {
-      "id": "log-1790057165529",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated for mobile +918220230896",
-      "timestamp": "2026-09-22T06:06:05.529Z"
+      "id": "log-1790155631818",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: aarav (VW-2026-002). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T09:27:11.818Z"
     },
     {
-      "id": "log-1790057146878",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated for mobile +918220230896",
-      "timestamp": "2026-09-22T06:05:46.878Z"
+      "id": "log-1790155623085",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: aarav (VW-2026-002) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:27:03.085Z"
     },
     {
-      "id": "log-1790057105707",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated for mobile +918220230896",
-      "timestamp": "2026-09-22T06:05:05.707Z"
+      "id": "log-1790155621422",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: aarav (VW-2026-002) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:27:01.422Z"
     },
     {
-      "id": "log-1790057087995",
-      "action": "WHATSAPP_PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated for WhatsApp +918220230896",
-      "timestamp": "2026-09-22T06:04:47.995Z"
+      "id": "log-1790155621202",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: aarav (VW-2026-002) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:27:01.202Z"
     },
     {
-      "id": "log-1790056953223",
-      "action": "WHATSAPP_PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated for WhatsApp +918220230896",
-      "timestamp": "2026-09-22T06:02:33.223Z"
+      "id": "log-1790155620920",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: aarav (VW-2026-002) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:27:00.920Z"
     },
     {
-      "id": "log-1790054352749",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for nithishwaran2703@gmail.com",
-      "timestamp": "2026-09-22T05:19:12.749Z"
+      "id": "log-1790155618811",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: aarav (VW-2026-002) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:26:58.811Z"
     },
     {
-      "id": "log-1790054352514",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for nithishwaran2703@gmail.com",
-      "timestamp": "2026-09-22T05:19:12.514Z"
+      "id": "log-1790155617385",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: aarav (VW-2026-002) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:26:57.386Z"
     },
     {
-      "id": "log-1790054351980",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for nithishwaran2703@gmail.com",
-      "timestamp": "2026-09-22T05:19:11.980Z"
+      "id": "log-1790155615010",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: aarav (VW-2026-002) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:26:55.010Z"
     },
     {
-      "id": "log-1790054350435",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for nithishwaran2703@gmail.com",
-      "timestamp": "2026-09-22T05:19:10.435Z"
+      "id": "log-1790155229941",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"nothing\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:20:29.941Z"
     },
     {
-      "id": "log-1790054300689",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1790054256280",
-      "userName": "nithish",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for nithishwaran2703@gmail.com",
-      "timestamp": "2026-09-22T05:18:20.689Z"
+      "id": "log-1790155173861",
+      "action": "Mark Attendance",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Attendance",
+      "details": "Logged daily attendance records (1 students)",
+      "timestamp": "2026-09-23T09:19:33.861Z"
     },
     {
-      "id": "log-1790054256280",
+      "id": "log-1790155146762",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: khan (VW-2026-001) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T09:19:06.762Z"
+    },
+    {
+      "id": "log-1790155105216",
       "action": "Created Admin User",
-      "userId": "usr-1",
-      "userName": "Administrator",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
       "resource": "Users",
-      "details": "Created new admin user: nithish (ADMIN)",
-      "timestamp": "2026-09-22T05:17:36.280Z"
+      "details": "Created new admin user: gokul (PARENT)",
+      "timestamp": "2026-09-23T09:18:25.216Z"
     },
     {
-      "id": "log-1790054168131",
-      "action": "Deleted User Account",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Deleted user account: Admissions Desk (Enquiry Manager) (admissions@vannam.edu)",
-      "timestamp": "2026-09-22T05:16:08.131Z"
-    },
-    {
-      "id": "log-1790054165129",
-      "action": "Deleted User Account",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Deleted user account: (Super Admin) (nithish@gmail.com)",
-      "timestamp": "2026-09-22T05:16:05.129Z"
-    },
-    {
-      "id": "log-1790054144919",
-      "action": "Deleted User Account",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Deleted user account: Vikram K. (Content Manager) (content@vannam.edu)",
-      "timestamp": "2026-09-22T05:15:44.919Z"
-    },
-    {
-      "id": "log-1790054133100",
-      "action": "Deleted User Account",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Deleted user account: Dr. Gayathri R. (Super Admin) (admin@vannam.edu)",
-      "timestamp": "2026-09-22T05:15:33.100Z"
-    },
-    {
-      "id": "log-1790054127261",
-      "action": "Deleted User Account",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Deleted user account: Mr.gokulnath (gokul@gmail.com)",
-      "timestamp": "2026-09-22T05:15:27.261Z"
-    },
-    {
-      "id": "log-1790054087667",
-      "action": "ADMIN Login",
-      "userId": "usr-1",
-      "userName": "(Super Admin)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-22T05:14:47.667Z"
-    },
-    {
-      "id": "log-1790053839230",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-1",
-      "userName": "(Super Admin)",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for nithish@gmail.com",
-      "timestamp": "2026-09-22T05:10:39.230Z"
-    },
-    {
-      "id": "log-1790053720349",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-admin-default",
-      "userName": "Dr. Gayathri R. (Super Admin)",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for admin@vannam.edu",
-      "timestamp": "2026-09-22T05:08:40.349Z"
-    },
-    {
-      "id": "log-1790053674096",
-      "action": "PASSWORD_RESET_SUCCESS",
-      "userId": "usr-admin-default",
-      "userName": "Dr. Gayathri R. (Super Admin)",
-      "resource": "Auth",
-      "details": "Password successfully updated via OTP verification for admin@vannam.edu",
-      "timestamp": "2026-09-22T05:07:54.096Z"
-    },
-    {
-      "id": "log-1790053674042",
-      "action": "PASSWORD_RESET_OTP_REQUESTED",
-      "userId": "usr-admin-default",
-      "userName": "Dr. Gayathri R. (Super Admin)",
-      "resource": "Auth",
-      "details": "Password reset verification OTP generated and dispatched for admin@vannam.edu",
-      "timestamp": "2026-09-22T05:07:54.042Z"
-    },
-    {
-      "id": "log-1790048872973",
-      "action": "ADMIN Login",
-      "userId": "usr-1",
-      "userName": "(Super Admin)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-22T03:47:52.973Z"
-    },
-    {
-      "id": "log-1790048860943",
-      "action": "TEACHER Login",
-      "userId": "usr-teacher-1",
-      "userName": "Mrs. Priya Sharma",
-      "resource": "Auth",
-      "details": "Successful login to teacher portal",
-      "timestamp": "2026-09-22T03:47:40.943Z"
-    },
-    {
-      "id": "log-1790048846513",
-      "action": "ADMIN Login",
-      "userId": "usr-admissions-default",
-      "userName": "Admissions Desk (Enquiry Manager)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-22T03:47:26.513Z"
-    },
-    {
-      "id": "log-1790048832685",
-      "action": "ADMIN Login",
-      "userId": "usr-content-default",
-      "userName": "Vikram K. (Content Manager)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-22T03:47:12.685Z"
-    },
-    {
-      "id": "log-1790048817187",
-      "action": "ADMIN Login",
-      "userId": "usr-admin-default",
-      "userName": "Dr. Gayathri R. (Super Admin)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-22T03:46:57.187Z"
-    },
-    {
-      "id": "log-1790048375074",
-      "action": "content_manager Login",
-      "userId": "usr-teacher-1",
-      "userName": "Mr.gokulnath",
-      "resource": "Auth",
-      "details": "Successful login to content_manager portal",
-      "timestamp": "2026-09-22T03:39:35.074Z"
-    },
-    {
-      "id": "log-1790048342210",
-      "action": "Updated User Credentials",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Updated credentials for user Mr.gokulnath (gokul@gmail.com)",
-      "timestamp": "2026-09-22T03:39:02.211Z"
-    },
-    {
-      "id": "log-1790048339005",
-      "action": "Updated User Credentials",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Updated credentials for user Mr.gokulnath (gokul@gmail.com)",
-      "timestamp": "2026-09-22T03:38:59.005Z"
-    },
-    {
-      "id": "log-1790048312227",
-      "action": "ADMIN Login",
-      "userId": "usr-1",
-      "userName": "(Super Admin)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-22T03:38:32.227Z"
-    },
-    {
-      "id": "log-1790048224384",
-      "action": "Updated User Credentials",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Updated credentials for user Mr.gokulnath (gokul@gmail.com)",
-      "timestamp": "2026-09-22T03:37:04.384Z"
-    },
-    {
-      "id": "log-1789979427879",
-      "action": "Updated Testimonials Content",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "testimonials",
-      "details": "Modified website section: testimonials",
-      "timestamp": "2026-09-21T08:30:27.879Z"
-    },
-    {
-      "id": "log-1789979329594",
-      "action": "Updated Announcement",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Announcements",
-      "details": "Updated announcement: Grand Weekend Open House & Child Sensory Camp (Active: false)",
-      "timestamp": "2026-09-21T08:28:49.594Z"
-    },
-    {
-      "id": "log-1789979320221",
-      "action": "Updated Announcement",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Announcements",
-      "details": "Updated announcement: Grand Weekend Open House & Child Sensory Camp (Active: true)",
-      "timestamp": "2026-09-21T08:28:40.221Z"
-    },
-    {
-      "id": "log-1789979217346",
-      "action": "ADMIN Login",
-      "userId": "usr-1",
-      "userName": "(Super Admin)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-21T08:26:57.346Z"
-    },
-    {
-      "id": "log-1789979095774",
-      "action": "ADMIN Login",
-      "userId": "usr-1",
-      "userName": "(Super Admin)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-21T08:24:55.774Z"
-    },
-    {
-      "id": "log-1789978501592",
-      "action": "Updated User Credentials",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Updated credentials for user Teacher Sarah Jenkins (nithish@gmail.com)",
-      "timestamp": "2026-09-21T08:15:01.592Z"
-    },
-    {
-      "id": "log-1789978497905",
-      "action": "Updated User Credentials",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Updated credentials for user Teacher Sarah Jenkins (nithish@gmail.com)",
-      "timestamp": "2026-09-21T08:14:57.905Z"
-    },
-    {
-      "id": "log-1789978469056",
-      "action": "Updated User Credentials",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Updated credentials for user (Super Admin) (nithish@gmail.com)",
-      "timestamp": "2026-09-21T08:14:29.056Z"
-    },
-    {
-      "id": "log-1789978463328",
-      "action": "Updated User Credentials",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Users",
-      "details": "Updated credentials for user (Super Admin) (nithish@gmail.com)",
-      "timestamp": "2026-09-21T08:14:23.328Z"
-    },
-    {
-      "id": "log-1789978006458",
-      "action": "Updated Website Settings",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Settings",
-      "details": "Updated global site branding, SEO, contact, and navigation settings",
-      "timestamp": "2026-09-21T08:06:46.458Z"
-    },
-    {
-      "id": "log-1789977969005",
-      "action": "Updated Website Settings",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Settings",
-      "details": "Updated global site branding, SEO, contact, and navigation settings",
-      "timestamp": "2026-09-21T08:06:09.005Z"
-    },
-    {
-      "id": "log-1789963293724",
+      "id": "log-1790154773906",
       "action": "Archive Student",
       "userId": "usr-1",
       "userName": "Administrator",
       "resource": "Students",
-      "details": "Archived student record: Vihaan Karthik (VW-2026-003). Parent credentials for karthik.v@example.com revoked.",
-      "timestamp": "2026-09-21T04:01:33.724Z"
+      "details": "Archived student record: kavitha (001). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T09:12:53.906Z"
     },
     {
-      "id": "log-1789963284566",
-      "action": "Archive Student",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Students",
-      "details": "Archived student record: Ananya Ramesh (VW-2026-002). Parent credentials for ramesh.s@example.com revoked.",
-      "timestamp": "2026-09-21T04:01:24.566Z"
-    },
-    {
-      "id": "log-1789963272701",
-      "action": "Archive Student",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Students",
-      "details": "Archived student record: Aarav Sharma (VW-2026-001). Parent credentials for deepak.sharma@example.com revoked.",
-      "timestamp": "2026-09-21T04:01:12.701Z"
-    },
-    {
-      "id": "log-1789961761266",
-      "action": "Updated Announcement",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Announcements",
-      "details": "Updated announcement: Admissions Open for Academic Year 2026–27 (Active: false)",
-      "timestamp": "2026-09-21T03:36:01.266Z"
-    },
-    {
-      "id": "log-1789961758672",
-      "action": "Updated Announcement",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Announcements",
-      "details": "Updated announcement: Admissions Open for Academic Year 2026–27 (Active: true)",
-      "timestamp": "2026-09-21T03:35:58.672Z"
-    },
-    {
-      "id": "log-1789961756378",
-      "action": "Updated Announcement",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Announcements",
-      "details": "Updated announcement: Grand Weekend Open House & Child Sensory Camp (Active: false)",
-      "timestamp": "2026-09-21T03:35:56.378Z"
-    },
-    {
-      "id": "log-1789961749863",
-      "action": "Updated Announcement",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Announcements",
-      "details": "Updated announcement: Grand Weekend Open House & Child Sensory Camp (Active: true)",
-      "timestamp": "2026-09-21T03:35:49.863Z"
-    },
-    {
-      "id": "log-1789961336971",
-      "action": "Updated Testimonials Content",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "testimonials",
-      "details": "Modified website section: testimonials",
-      "timestamp": "2026-09-21T03:28:56.971Z"
-    },
-    {
-      "id": "log-1789961266269",
+      "id": "log-1790154705794",
       "action": "ADMIN Login",
       "userId": "usr-1",
-      "userName": "Dr. Gayathri R. (Super Admin)",
+      "userName": "nithish",
       "resource": "Auth",
       "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-09-21T03:27:46.269Z"
+      "timestamp": "2026-09-23T09:11:45.794Z"
     },
     {
-      "id": "log-1789799838354",
+      "id": "log-1790153952165",
+      "action": "Deleted User Account",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Deleted user account: Parent (gokul@gmail.com)",
+      "timestamp": "2026-09-23T08:59:12.165Z"
+    },
+    {
+      "id": "log-1790153910544",
+      "action": "Deleted User Account",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Deleted user account: Mrs. Priya Sharma (teacher@vannam.edu)",
+      "timestamp": "2026-09-23T08:58:30.544Z"
+    },
+    {
+      "id": "log-1790153871027",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Sensory Finger Painting & Color Mixing\"",
+      "timestamp": "2026-09-23T08:57:51.027Z"
+    },
+    {
+      "id": "log-1790153725092",
       "action": "Mark Attendance",
       "userId": "usr-1",
       "userName": "Administrator",
       "resource": "Attendance",
       "details": "Logged daily attendance records (1 students)",
-      "timestamp": "2026-09-19T06:37:18.354Z"
+      "timestamp": "2026-09-23T08:55:25.092Z"
     },
     {
-      "id": "log-1789799782054",
-      "action": "Mark Attendance",
+      "id": "log-1790153560593",
+      "action": "Delete Activity",
       "userId": "usr-1",
       "userName": "Administrator",
-      "resource": "Attendance",
-      "details": "Logged daily attendance records (1 students)",
-      "timestamp": "2026-09-19T06:36:22.054Z"
+      "resource": "Activities",
+      "details": "Removed activity: \"Seed Germination & Leaf Examination\"",
+      "timestamp": "2026-09-23T08:52:40.593Z"
     },
     {
-      "id": "log-1789799699323",
+      "id": "log-1790153443446",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"Leaf & Color Exploration\"",
+      "timestamp": "2026-09-23T08:50:43.446Z"
+    },
+    {
+      "id": "log-1790153443390",
+      "action": "Update Homework Completion",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Student std-1790151401403 marked homework \"Leaf & Color Exploration\" as pending",
+      "timestamp": "2026-09-23T08:50:43.390Z"
+    },
+    {
+      "id": "log-1790153443322",
+      "action": "Update Homework Completion",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Student std-1790151401403 marked homework \"Leaf & Color Exploration\" as completed",
+      "timestamp": "2026-09-23T08:50:43.322Z"
+    },
+    {
+      "id": "log-1790153435790",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"Leaf & Color Exploration\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T08:50:35.790Z"
+    },
+    {
+      "id": "log-1790153009316",
+      "action": "Deleted Educator",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Faculty",
+      "details": "Deleted educator Kavitha Sundaram",
+      "timestamp": "2026-09-23T08:43:29.316Z"
+    },
+    {
+      "id": "log-1790152741445",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Tactile Pink Tower Montessori Assembly\"",
+      "timestamp": "2026-09-23T08:39:01.445Z"
+    },
+    {
+      "id": "log-1790152732000",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Montessori Cosmic Space Exploration\"",
+      "timestamp": "2026-09-23T08:38:52.000Z"
+    },
+    {
+      "id": "log-1790152719565",
+      "action": "Update Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Updated record for student: kavitha",
+      "timestamp": "2026-09-23T08:38:39.565Z"
+    },
+    {
+      "id": "log-1790152715260",
+      "action": "Update Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Updated record for student: kavitha",
+      "timestamp": "2026-09-23T08:38:35.260Z"
+    },
+    {
+      "id": "log-1790152367039",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"Phonics Sound 'S' and 'A' Tracing\"",
+      "timestamp": "2026-09-23T08:32:47.039Z"
+    },
+    {
+      "id": "log-1790152354415",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"Tactile Shape & Color Hunt\"",
+      "timestamp": "2026-09-23T08:32:34.415Z"
+    },
+    {
+      "id": "log-1790151420534",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: kavitha (001). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T08:17:00.534Z"
+    },
+    {
+      "id": "log-1790151401403",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: kavitha (001) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T08:16:41.403Z"
+    },
+    {
+      "id": "log-1790151398999",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: kavitha (001) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T08:16:38.999Z"
+    },
+    {
+      "id": "log-1790151325368",
+      "action": "Created Admin User",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Created new admin user: kavitha  (ADMIN)",
+      "timestamp": "2026-09-23T08:15:25.368Z"
+    },
+    {
+      "id": "log-1790151201807",
+      "action": "Deleted User Account",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Deleted user account: Deepa Krishnan (deepa.krishnan@example.com)",
+      "timestamp": "2026-09-23T08:13:21.807Z"
+    },
+    {
+      "id": "log-1790151192152",
+      "action": "Deleted User Account",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Deleted user account: Test Parent Alpha (testalpha@example.com)",
+      "timestamp": "2026-09-23T08:13:12.152Z"
+    },
+    {
+      "id": "log-1790151189019",
+      "action": "Deleted User Account",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Deleted user account: Test Parent (testparent@gmail.com)",
+      "timestamp": "2026-09-23T08:13:09.019Z"
+    },
+    {
+      "id": "log-1790151172419",
+      "action": "Updated User Credentials",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Updated credentials for user nithish (admin@vannam.edu)",
+      "timestamp": "2026-09-23T08:12:52.419Z"
+    },
+    {
+      "id": "log-1790151153613",
+      "action": "Updated User Credentials",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Updated credentials for user nithish (admin@vannam.edu)",
+      "timestamp": "2026-09-23T08:12:33.613Z"
+    },
+    {
+      "id": "log-1790151150558",
+      "action": "Updated User Credentials",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Updated credentials for user nithish (admin@vannam.edu)",
+      "timestamp": "2026-09-23T08:12:30.558Z"
+    },
+    {
+      "id": "log-1790151099640",
+      "action": "Deleted User Account",
+      "userId": "usr-1790054256280",
+      "userName": "nithish",
+      "resource": "Users",
+      "details": "Deleted user account: Kavitha Sundaram (kavitha.teacher@vannam.edu)",
+      "timestamp": "2026-09-23T08:11:39.640Z"
+    },
+    {
+      "id": "log-1790151086037",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Test Student (VW-2026-999). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T08:11:26.037Z"
+    },
+    {
+      "id": "log-1790151058910",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Aarav Sundaram (VW-2026-101). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T08:10:58.910Z"
+    },
+    {
+      "id": "log-1790151047269",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Diya Sundaram (VW-2026-102). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T08:10:47.269Z"
+    },
+    {
+      "id": "log-1790150838846",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"My Family Tree Drawing\"",
+      "timestamp": "2026-09-23T08:07:18.846Z"
+    },
+    {
+      "id": "log-1790150837792",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Outdoor Nature Exploration & Leaf Printing\"",
+      "timestamp": "2026-09-23T08:07:17.792Z"
+    },
+    {
+      "id": "log-1790150835020",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Meera Krishnan (VW-NEW-001). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T08:07:15.020Z"
+    },
+    {
+      "id": "log-1790150834233",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: Meera Krishnan (VW-NEW-001) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T08:07:14.233Z"
+    },
+    {
+      "id": "log-1790150834187",
+      "action": "ADMIN Login",
+      "userId": "usr-1",
+      "userName": "Dr. Gayathri R. (Super Admin)",
+      "resource": "Auth",
+      "details": "Successful login to admin portal",
+      "timestamp": "2026-09-23T08:07:14.187Z"
+    },
+    {
+      "id": "log-1790150833745",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"My Family Tree Drawing\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T08:07:13.745Z"
+    },
+    {
+      "id": "log-1790150831182",
       "action": "Post Student Activity",
       "userId": "usr-1",
       "userName": "Administrator",
       "resource": "Activities",
-      "details": "Logged activity \"Montessori Cosmic Space Exploration\" for Aarav Sharma",
-      "timestamp": "2026-09-19T06:34:59.323Z"
+      "details": "Logged activity \"Outdoor Nature Exploration & Leaf Printing\" for Diya Sundaram",
+      "timestamp": "2026-09-23T08:07:11.182Z"
     },
     {
-      "id": "log-1788755258352",
-      "action": "Updated Testimonials Content",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "testimonials",
-      "details": "Modified website section: testimonials",
-      "timestamp": "2026-09-07T04:27:38.352Z"
-    },
-    {
-      "id": "log-1787978655210",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status under_review",
-      "timestamp": "2026-08-29T04:44:15.210Z"
-    },
-    {
-      "id": "log-1787978654089",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status approved",
-      "timestamp": "2026-08-29T04:44:14.089Z"
-    },
-    {
-      "id": "log-1787978652566",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status completed",
-      "timestamp": "2026-08-29T04:44:12.566Z"
-    },
-    {
-      "id": "log-1787978652010",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status contacted",
-      "timestamp": "2026-08-29T04:44:12.010Z"
-    },
-    {
-      "id": "log-1787978651228",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status under_review",
-      "timestamp": "2026-08-29T04:44:11.228Z"
-    },
-    {
-      "id": "log-1787978631564",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status rejected",
-      "timestamp": "2026-08-29T04:43:51.564Z"
-    },
-    {
-      "id": "log-1787978630549",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status under_review",
-      "timestamp": "2026-08-29T04:43:50.549Z"
-    },
-    {
-      "id": "log-1787978628720",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status approved",
-      "timestamp": "2026-08-29T04:43:48.720Z"
-    },
-    {
-      "id": "log-1787978625071",
-      "action": "Updated Admission",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "Admissions",
-      "details": "Updated application #adm-202 for Aditi Narayanan to status new",
-      "timestamp": "2026-08-29T04:43:45.071Z"
-    },
-    {
-      "id": "log-1787977666758",
-      "action": "Updated Testimonials Content",
-      "userId": "usr-1",
-      "userName": "Administrator",
-      "resource": "testimonials",
-      "details": "Modified website section: testimonials",
-      "timestamp": "2026-08-29T04:27:46.758Z"
-    },
-    {
-      "id": "log-1787977257843",
-      "action": "ADMIN Login",
-      "userId": "usr-1",
-      "userName": "Dr. Gayathri R. (Super Admin)",
-      "resource": "Auth",
-      "details": "Successful login to ADMIN portal",
-      "timestamp": "2026-08-29T04:20:57.843Z"
-    },
-    {
-      "id": "log-1787977216143",
+      "id": "log-1790150831080",
       "action": "TEACHER Login",
       "userId": "usr-teacher-1",
       "userName": "Mrs. Priya Sharma",
       "resource": "Auth",
       "details": "Successful login to teacher portal",
-      "timestamp": "2026-08-29T04:20:16.143Z"
+      "timestamp": "2026-09-23T08:07:11.081Z"
     },
     {
-      "id": "log-1787977150511",
-      "action": "enquiry_manager Login",
-      "userId": "usr-3",
-      "userName": "Shalini S. (Enquiry Manager)",
+      "id": "log-1790150810034",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"Shape Discovery Hunt\"",
+      "timestamp": "2026-09-23T08:06:50.034Z"
+    },
+    {
+      "id": "log-1790150809609",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Finger Painting Test\"",
+      "timestamp": "2026-09-23T08:06:49.609Z"
+    },
+    {
+      "id": "log-1790150809128",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Test Child Beta (VW-TEST-B01). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T08:06:49.128Z"
+    },
+    {
+      "id": "log-1790150808767",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Test Child Alpha Updated (VW-TEST-A01). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T08:06:48.767Z"
+    },
+    {
+      "id": "log-1790150807786",
+      "action": "TEACHER Login",
+      "userId": "usr-teacher-1",
+      "userName": "Mrs. Priya Sharma",
       "resource": "Auth",
-      "details": "Successful login to enquiry_manager portal",
-      "timestamp": "2026-08-29T04:19:10.511Z"
+      "details": "Successful login to teacher portal",
+      "timestamp": "2026-09-23T08:06:47.786Z"
     },
     {
-      "id": "log-1786945478562",
-      "action": "Admin Login",
+      "id": "log-1790150806838",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"Shape Discovery Hunt\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T08:06:46.838Z"
+    },
+    {
+      "id": "log-1790150806264",
+      "action": "Post Student Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Logged activity \"Finger Painting Test\" for Test Child Alpha",
+      "timestamp": "2026-09-23T08:06:46.264Z"
+    },
+    {
+      "id": "log-1790150806006",
+      "action": "Mark Attendance",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Attendance",
+      "details": "Logged daily attendance records (2 students)",
+      "timestamp": "2026-09-23T08:06:46.006Z"
+    },
+    {
+      "id": "log-1790150801835",
+      "action": "Update Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Updated record for student: Test Child Alpha Updated",
+      "timestamp": "2026-09-23T08:06:41.835Z"
+    },
+    {
+      "id": "log-1790150798799",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: Test Child Beta (VW-TEST-B01) in Junior Kindergarten STEAM",
+      "timestamp": "2026-09-23T08:06:38.799Z"
+    },
+    {
+      "id": "log-1790150794998",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: Test Child Alpha (VW-TEST-A01) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T08:06:34.998Z"
+    },
+    {
+      "id": "log-1790150794354",
+      "action": "ADMIN Login",
       "userId": "usr-1",
       "userName": "Dr. Gayathri R. (Super Admin)",
       "resource": "Auth",
-      "details": "Successful login as super_admin",
-      "timestamp": "2026-08-17T05:44:38.562Z"
+      "details": "Successful login to admin portal",
+      "timestamp": "2026-09-23T08:06:34.354Z"
     },
     {
-      "id": "log-1",
-      "action": "System Initialized",
+      "id": "log-1790146328003",
+      "action": "Delete Homework",
       "userId": "usr-1",
-      "userName": "Dr. Gayathri R.",
-      "resource": "System",
-      "details": "Admin Control Center initialized with verified production seed data.",
-      "timestamp": "2026-08-17T10:00:00Z"
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"Shape Discovery Hunt\"",
+      "timestamp": "2026-09-23T06:52:08.003Z"
     },
     {
-      "id": "log-2",
-      "action": "Updated Announcement",
+      "id": "log-1790146327485",
+      "action": "Delete Activity",
       "userId": "usr-1",
-      "userName": "Dr. Gayathri R.",
-      "resource": "Announcements",
-      "details": "Activated 'Admissions Open 2026–27' banner on public site.",
-      "timestamp": "2026-08-17T10:15:00Z"
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Finger Painting Test\"",
+      "timestamp": "2026-09-23T06:52:07.485Z"
+    },
+    {
+      "id": "log-1790146327102",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Test Child Beta (VW-TEST-B01). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T06:52:07.102Z"
+    },
+    {
+      "id": "log-1790146326586",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Test Child Alpha Updated (VW-TEST-A01). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T06:52:06.586Z"
+    },
+    {
+      "id": "log-1790146326379",
+      "action": "TEACHER Login",
+      "userId": "usr-teacher-1",
+      "userName": "Mrs. Priya Sharma",
+      "resource": "Auth",
+      "details": "Successful login to teacher portal",
+      "timestamp": "2026-09-23T06:52:06.379Z"
+    },
+    {
+      "id": "log-1790146325875",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"Shape Discovery Hunt\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T06:52:05.875Z"
+    },
+    {
+      "id": "log-1790146325414",
+      "action": "Post Student Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Logged activity \"Finger Painting Test\" for Test Child Alpha",
+      "timestamp": "2026-09-23T06:52:05.414Z"
+    },
+    {
+      "id": "log-1790146325373",
+      "action": "Mark Attendance",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Attendance",
+      "details": "Logged daily attendance records (2 students)",
+      "timestamp": "2026-09-23T06:52:05.373Z"
+    },
+    {
+      "id": "log-1790146320654",
+      "action": "Update Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Updated record for student: Test Child Alpha Updated",
+      "timestamp": "2026-09-23T06:52:00.654Z"
+    },
+    {
+      "id": "log-1790146317268",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: Test Child Beta (VW-TEST-B01) in Junior Kindergarten STEAM",
+      "timestamp": "2026-09-23T06:51:57.268Z"
+    },
+    {
+      "id": "log-1790146313635",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: Test Child Alpha (VW-TEST-A01) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T06:51:53.635Z"
+    },
+    {
+      "id": "log-1790146313452",
+      "action": "ADMIN Login",
+      "userId": "usr-1",
+      "userName": "Dr. Gayathri R. (Super Admin)",
+      "resource": "Auth",
+      "details": "Successful login to admin portal",
+      "timestamp": "2026-09-23T06:51:53.452Z"
+    },
+    {
+      "id": "log-1790146300631",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"My Family Tree Drawing\"",
+      "timestamp": "2026-09-23T06:51:40.631Z"
+    },
+    {
+      "id": "log-1790146300145",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Outdoor Nature Exploration & Leaf Printing\"",
+      "timestamp": "2026-09-23T06:51:40.145Z"
+    },
+    {
+      "id": "log-1790146297265",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Meera Krishnan (VW-NEW-001). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T06:51:37.265Z"
+    },
+    {
+      "id": "log-1790146296566",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: Meera Krishnan (VW-NEW-001) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T06:51:36.566Z"
+    },
+    {
+      "id": "log-1790146296540",
+      "action": "ADMIN Login",
+      "userId": "usr-1",
+      "userName": "Dr. Gayathri R. (Super Admin)",
+      "resource": "Auth",
+      "details": "Successful login to admin portal",
+      "timestamp": "2026-09-23T06:51:36.540Z"
+    },
+    {
+      "id": "log-1790146296037",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"My Family Tree Drawing\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T06:51:36.037Z"
+    },
+    {
+      "id": "log-1790146293132",
+      "action": "Post Student Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Logged activity \"Outdoor Nature Exploration & Leaf Printing\" for Diya Sundaram",
+      "timestamp": "2026-09-23T06:51:33.132Z"
+    },
+    {
+      "id": "log-1790146293046",
+      "action": "TEACHER Login",
+      "userId": "usr-teacher-1",
+      "userName": "Mrs. Priya Sharma",
+      "resource": "Auth",
+      "details": "Successful login to teacher portal",
+      "timestamp": "2026-09-23T06:51:33.046Z"
+    },
+    {
+      "id": "log-1790146081772",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"My Family Tree Drawing\"",
+      "timestamp": "2026-09-23T06:48:01.772Z"
+    },
+    {
+      "id": "log-1790146080533",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Outdoor Nature Exploration & Leaf Printing\"",
+      "timestamp": "2026-09-23T06:48:00.533Z"
+    },
+    {
+      "id": "log-1790146080176",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Meera Krishnan (VW-NEW-001). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T06:48:00.176Z"
+    },
+    {
+      "id": "log-1790146079148",
+      "action": "Create Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Enrolled new student: Meera Krishnan (VW-NEW-001) in Pre-KG Explorers",
+      "timestamp": "2026-09-23T06:47:59.148Z"
+    },
+    {
+      "id": "log-1790146079116",
+      "action": "ADMIN Login",
+      "userId": "usr-1",
+      "userName": "Dr. Gayathri R. (Super Admin)",
+      "resource": "Auth",
+      "details": "Successful login to admin portal",
+      "timestamp": "2026-09-23T06:47:59.116Z"
+    },
+    {
+      "id": "log-1790146066066",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"My Family Tree Drawing\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T06:47:46.066Z"
+    },
+    {
+      "id": "log-1790146056426",
+      "action": "Post Student Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Logged activity \"Outdoor Nature Exploration & Leaf Printing\" for Diya Sundaram",
+      "timestamp": "2026-09-23T06:47:36.426Z"
+    },
+    {
+      "id": "log-1790146056309",
+      "action": "TEACHER Login",
+      "userId": "usr-teacher-1",
+      "userName": "Mrs. Priya Sharma",
+      "resource": "Auth",
+      "details": "Successful login to teacher portal",
+      "timestamp": "2026-09-23T06:47:36.310Z"
+    },
+    {
+      "id": "log-1790143991008",
+      "action": "Delete Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Deleted task \"Shape Discovery Hunt\"",
+      "timestamp": "2026-09-23T06:13:11.008Z"
+    },
+    {
+      "id": "log-1790143989813",
+      "action": "Delete Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Removed activity: \"Finger Painting Test\"",
+      "timestamp": "2026-09-23T06:13:09.813Z"
+    },
+    {
+      "id": "log-1790143989332",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Test Child Beta (VW-TEST-B01). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T06:13:09.332Z"
+    },
+    {
+      "id": "log-1790143987554",
+      "action": "Archive Student",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Students",
+      "details": "Archived student record: Test Child Alpha Updated (VW-TEST-A01). Parent login credentials preserved.",
+      "timestamp": "2026-09-23T06:13:07.554Z"
+    },
+    {
+      "id": "log-1790143987176",
+      "action": "TEACHER Login",
+      "userId": "usr-teacher-1",
+      "userName": "Mrs. Priya Sharma",
+      "resource": "Auth",
+      "details": "Successful login to teacher portal",
+      "timestamp": "2026-09-23T06:13:07.176Z"
+    },
+    {
+      "id": "log-1790143986471",
+      "action": "Assign Homework",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Homework",
+      "details": "Created task \"Shape Discovery Hunt\" for Pre-KG Explorers",
+      "timestamp": "2026-09-23T06:13:06.471Z"
+    },
+    {
+      "id": "log-1790143985071",
+      "action": "Post Student Activity",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Activities",
+      "details": "Logged activity \"Finger Painting Test\" for Test Child Alpha",
+      "timestamp": "2026-09-23T06:13:05.071Z"
+    },
+    {
+      "id": "log-1790143985013",
+      "action": "Mark Attendance",
+      "userId": "usr-1",
+      "userName": "Administrator",
+      "resource": "Attendance",
+      "details": "Logged daily attendance records (2 students)",
+      "timestamp": "2026-09-23T06:13:05.013Z"
     }
   ],
   "classes": [
@@ -1332,77 +1611,274 @@
       "academicYear": "2026-27"
     }
   ],
-  "students": [],
-  "activities": [
+  "students": [
     {
-      "id": "act-1789799699323",
-      "title": "Montessori Cosmic Space Exploration",
-      "category": "STEAM",
-      "description": "Aarav built a 3-stage wooden rocket model and named the planets.",
-      "date": "2026-08-30",
-      "studentId": "std-1",
-      "studentName": "Aarav Sharma",
-      "classId": "class-pre-kg-a",
-      "className": "Pre-KG Explorers",
-      "teacherId": null,
-      "teacherName": "Educator",
-      "photos": [],
-      "createdAt": "2026-09-19T06:34:59.323Z"
-    },
-    {
-      "id": "act-1",
-      "studentId": "std-1",
-      "studentName": "Aarav Sharma",
+      "id": "std-1790155623085",
+      "studentId": "VW-2026-002",
+      "name": "aarav",
+      "dob": "2023-01-01",
+      "gender": "Boy",
       "classId": "class-pre-kg-a",
       "className": "Pre-KG Explorers",
       "teacherId": "priya-sharma",
       "teacherName": "Mrs. Priya Sharma",
-      "title": "Sensory Finger Painting & Color Mixing",
-      "category": "Art & Sensory",
-      "description": "Aarav participated in the finger painting activity today. He created beautiful concentric color patterns using child-safe organic paints.",
-      "date": "2026-08-29",
-      "photos": [
-        "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&q=80",
-        "https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&q=80"
-      ],
-      "createdAt": "2026-08-29T04:30:00Z"
+      "parentName": "gokul",
+      "parentEmail": "gokul@gmail.com",
+      "parentPhone": "123456892",
+      "parentPin": "2026",
+      "emergencyContact": "12134567890",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "status": "Active",
+      "enrollmentDate": "2026-09-23",
+      "photo": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80",
+      "createdAt": "2026-09-23T09:27:03.085Z"
     },
     {
-      "id": "act-2",
-      "studentId": "std-2",
-      "studentName": "Ananya Ramesh",
+      "id": "std-1790155621422",
+      "studentId": "VW-2026-002",
+      "name": "aarav",
+      "dob": "2023-01-01",
+      "gender": "Boy",
       "classId": "class-pre-kg-a",
       "className": "Pre-KG Explorers",
       "teacherId": "priya-sharma",
       "teacherName": "Mrs. Priya Sharma",
-      "title": "Tactile Pink Tower Montessori Assembly",
-      "category": "Montessori Math",
-      "description": "Ananya accurately stacked 10 gradation cubes in descending size order, showing exceptional concentration and spatial judgment.",
-      "date": "2026-08-29",
-      "photos": [
-        "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=800&q=80"
-      ],
-      "createdAt": "2026-08-29T05:15:00Z"
+      "parentName": "gokul",
+      "parentEmail": "gokul@gmail.com",
+      "parentPhone": "123456892",
+      "parentPin": "2026",
+      "emergencyContact": "12134567890",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "status": "Active",
+      "enrollmentDate": "2026-09-23",
+      "photo": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80",
+      "createdAt": "2026-09-23T09:27:01.422Z"
     },
     {
-      "id": "act-3",
-      "studentId": "std-3",
-      "studentName": "Vihaan Karthik",
-      "classId": "class-lkg-a",
-      "className": "Junior Kindergarten STEAM",
-      "teacherId": "ananya-deshmukh",
-      "teacherName": "Ms. Ananya Deshmukh",
-      "title": "Seed Germination & Leaf Examination",
-      "category": "Junior STEAM",
-      "description": "Vihaan used a tactile hand magnifier to observe sprouting organic mung beans and recorded root structures in his nature diary.",
-      "date": "2026-08-29",
-      "photos": [
-        "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80"
-      ],
-      "createdAt": "2026-08-29T06:00:00Z"
+      "id": "std-1790155621201",
+      "studentId": "VW-2026-002",
+      "name": "aarav",
+      "dob": "2023-01-01",
+      "gender": "Boy",
+      "classId": "class-pre-kg-a",
+      "className": "Pre-KG Explorers",
+      "teacherId": "priya-sharma",
+      "teacherName": "Mrs. Priya Sharma",
+      "parentName": "gokul",
+      "parentEmail": "gokul@gmail.com",
+      "parentPhone": "123456892",
+      "parentPin": "2026",
+      "emergencyContact": "12134567890",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "status": "Active",
+      "enrollmentDate": "2026-09-23",
+      "photo": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80",
+      "createdAt": "2026-09-23T09:27:01.202Z"
+    },
+    {
+      "id": "std-1790155618811",
+      "studentId": "VW-2026-002",
+      "name": "aarav",
+      "dob": "2023-01-01",
+      "gender": "Boy",
+      "classId": "class-pre-kg-a",
+      "className": "Pre-KG Explorers",
+      "teacherId": "priya-sharma",
+      "teacherName": "Mrs. Priya Sharma",
+      "parentName": "gokul",
+      "parentEmail": "gokul@gmail.com",
+      "parentPhone": "123456892",
+      "parentPin": "2026",
+      "emergencyContact": "12134567890",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "status": "Active",
+      "enrollmentDate": "2026-09-23",
+      "photo": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80",
+      "createdAt": "2026-09-23T09:26:58.811Z"
+    },
+    {
+      "id": "std-1790155617385",
+      "studentId": "VW-2026-002",
+      "name": "aarav",
+      "dob": "2023-01-01",
+      "gender": "Boy",
+      "classId": "class-pre-kg-a",
+      "className": "Pre-KG Explorers",
+      "teacherId": "priya-sharma",
+      "teacherName": "Mrs. Priya Sharma",
+      "parentName": "gokul",
+      "parentEmail": "gokul@gmail.com",
+      "parentPhone": "123456892",
+      "parentPin": "2026",
+      "emergencyContact": "12134567890",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "status": "Active",
+      "enrollmentDate": "2026-09-23",
+      "photo": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80",
+      "createdAt": "2026-09-23T09:26:57.385Z"
+    },
+    {
+      "id": "std-1790155615010",
+      "studentId": "VW-2026-002",
+      "name": "aarav",
+      "dob": "2023-01-01",
+      "gender": "Boy",
+      "classId": "class-pre-kg-a",
+      "className": "Pre-KG Explorers",
+      "teacherId": "priya-sharma",
+      "teacherName": "Mrs. Priya Sharma",
+      "parentName": "gokul",
+      "parentEmail": "gokul@gmail.com",
+      "parentPhone": "123456892",
+      "parentPin": "2026",
+      "emergencyContact": "12134567890",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "status": "Active",
+      "enrollmentDate": "2026-09-23",
+      "photo": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80",
+      "createdAt": "2026-09-23T09:26:55.010Z"
+    },
+    {
+      "id": "std-1790155146762",
+      "studentId": "VW-2026-001",
+      "name": "khan",
+      "dob": "2023-01-01",
+      "gender": "Boy",
+      "classId": "class-pre-kg-a",
+      "className": "Pre-KG Explorers",
+      "teacherId": "priya-sharma",
+      "teacherName": "Mrs. Priya Sharma",
+      "parentName": "gokul",
+      "parentEmail": "gokul@gmail.com",
+      "parentPhone": "1234567890",
+      "parentPin": "2026",
+      "emergencyContact": "1234567890",
+      "bloodGroup": "B+",
+      "allergies": "None",
+      "status": "Active",
+      "enrollmentDate": "2026-09-23",
+      "photo": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=200&q=80",
+      "createdAt": "2026-09-23T09:19:06.762Z"
     }
   ],
+  "activities": [],
   "attendance": [
+    {
+      "id": "att-1790155170681-4upbu",
+      "studentId": "std-1790155146762",
+      "studentName": "khan",
+      "classId": "class-pre-kg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "PRESENT",
+      "remarks": "",
+      "updatedAt": "2026-09-23T09:19:30.681Z"
+    },
+    {
+      "id": "att-1790153721613-oyt8g",
+      "studentId": "std-1790151401403",
+      "studentName": "kavitha",
+      "classId": "class-pre-kg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "PRESENT",
+      "remarks": "",
+      "updatedAt": "2026-09-23T08:55:21.613Z"
+    },
+    {
+      "id": "att-1790150805693-pn4oey",
+      "studentId": "std-1790150798798",
+      "studentName": "Test Child Beta",
+      "classId": "class-lkg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "LATE",
+      "remarks": "",
+      "updatedAt": "2026-09-23T08:06:45.693Z"
+    },
+    {
+      "id": "att-1790150805389-kwt0vp",
+      "studentId": "std-1790150794998",
+      "studentName": "Test Child Alpha",
+      "classId": "class-pre-kg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "PRESENT",
+      "remarks": "",
+      "updatedAt": "2026-09-23T08:06:45.389Z"
+    },
+    {
+      "id": "att-1790146324993-1wwqyo",
+      "studentId": "std-1790146317268",
+      "studentName": "Test Child Beta",
+      "classId": "class-lkg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "LATE",
+      "remarks": "",
+      "updatedAt": "2026-09-23T06:52:04.993Z"
+    },
+    {
+      "id": "att-1790146324535-pjm8b",
+      "studentId": "std-1790146313635",
+      "studentName": "Test Child Alpha",
+      "classId": "class-pre-kg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "PRESENT",
+      "remarks": "",
+      "updatedAt": "2026-09-23T06:52:04.535Z"
+    },
+    {
+      "id": "att-1790143984475-ysp5qk",
+      "studentId": "std-1790143972639",
+      "studentName": "Test Child Beta",
+      "classId": "class-lkg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "LATE",
+      "remarks": "",
+      "updatedAt": "2026-09-23T06:13:04.475Z"
+    },
+    {
+      "id": "att-1790143984060-ohmm8h",
+      "studentId": "std-1790143968497",
+      "studentName": "Test Child Alpha",
+      "classId": "class-pre-kg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "PRESENT",
+      "remarks": "",
+      "updatedAt": "2026-09-23T06:13:04.060Z"
+    },
+    {
+      "id": "att-1790143877099-3z2d",
+      "studentId": "std-1790143869062",
+      "studentName": "Test Child Beta",
+      "classId": "class-lkg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "LATE",
+      "remarks": "",
+      "updatedAt": "2026-09-23T06:11:17.099Z"
+    },
+    {
+      "id": "att-1790143876713-8ax359",
+      "studentId": "std-1790143861344",
+      "studentName": "Test Child Alpha",
+      "classId": "class-pre-kg-a",
+      "teacherId": "",
+      "date": "2026-09-23",
+      "status": "PRESENT",
+      "remarks": "",
+      "updatedAt": "2026-09-23T06:11:16.714Z"
+    },
     {
       "id": "att-1789799782054-xsow5n",
       "studentId": "std-1",
@@ -1447,30 +1923,18 @@
   ],
   "homework": [
     {
-      "id": "hw-1",
+      "id": "hw-1790155229941",
+      "title": "nothing",
+      "subject": "Cognitive Discovery",
+      "description": "nothing ",
       "classId": "class-pre-kg-a",
       "className": "Pre-KG Explorers",
-      "teacherId": "priya-sharma",
+      "teacherId": "clara-bennett",
       "teacherName": "Mrs. Priya Sharma",
-      "title": "Tactile Shape & Color Hunt",
-      "subject": "Cognitive Discovery",
-      "description": "Spot 3 yellow circular objects around the home with mommy or daddy and collect 2 soft leaves for tomorrow's craft collage.",
-      "dueDate": "2026-08-30",
+      "dueDate": "2026-09-24",
       "status": "ASSIGNED",
-      "materials": "Color chart Page 6, Craft pouch"
-    },
-    {
-      "id": "hw-2",
-      "classId": "class-lkg-a",
-      "className": "Junior Kindergarten STEAM",
-      "teacherId": "ananya-deshmukh",
-      "teacherName": "Ms. Ananya Deshmukh",
-      "title": "Phonics Sound 'S' and 'A' Tracing",
-      "subject": "Language & Phonics",
-      "description": "Trace letters S and A with beeswax crayons on the Montessori phonics card sheet and name 3 animals starting with each sound.",
-      "dueDate": "2026-08-30",
-      "status": "ASSIGNED",
-      "materials": "Jolly Phonics Workbook Section 1"
+      "materials": "Montessori Activity Booklet",
+      "createdAt": "2026-09-23T09:20:29.941Z"
     }
   ],
   "passwordResets": {

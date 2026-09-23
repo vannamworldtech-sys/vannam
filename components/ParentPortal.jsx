@@ -51,162 +51,18 @@ export default function ParentPortal({ isModal = false, onClose }) {
   const [loginError, setLoginError] = useState("");
 
   // Dashboard State
-  const [activeChildId, setActiveChildId] = useState("ananya");
+  const [activeChildId, setActiveChildId] = useState("");
+  const [loggedParentName, setLoggedParentName] = useState("");
+  const [loggedParentEmail, setLoggedParentEmail] = useState("");
   const [activityFilter, setActivityFilter] = useState("all"); // all, pending, completed
   const [selectedHomework, setSelectedHomework] = useState(null);
   const [isLiveCamOpen, setIsLiveCamOpen] = useState(false);
   const [selectedCam, setSelectedCam] = useState("cam1");
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
-  const [unreadCount, setUnreadCount] = useState(2);
+  const [unreadCount, setUnreadCount] = useState(0);
 
-  // Dynamic Children Data (Ananya & Vihaan)
-  const [childrenData, setChildrenData] = useState({
-    ananya: {
-      id: "ananya",
-      name: "Ananya Sharma",
-      avatarEmoji: "👧",
-      avatarBg: "from-amber-400 to-rose-400",
-      grade: "Playgroup STEAM",
-      campusId: "VW-2026-8942",
-      teacher: "Teacher Sarah Jenkins",
-      attendance: "98%",
-      overallProgress: 82,
-      homeworkCompletion: 91,
-      insight: "Outstanding progress in Phonics & Montessori puzzle block assembly this week!",
-      activities: [
-        { id: "act-1", time: "08:30 AM", title: "Mathematics Fun with Blocks", subject: "Math & Logic", status: "completed", icon: "📐", teacherNote: "Built a 5-tier pyramid independently." },
-        { id: "act-2", time: "10:00 AM", title: "STEAM Nature Observation", subject: "Science", status: "in-progress", icon: "🌿", teacherNote: "Examining leaves and seeds under mini magnifier." },
-        { id: "act-3", time: "12:30 PM", title: "Organic Farm-Fresh Lunch", subject: "Nutrition", status: "completed", icon: "🥗", teacherNote: "Ate full portion of avocado pasta and berries." },
-        { id: "act-4", time: "03:30 PM", title: "Phonics & Storybook Circle", subject: "English", status: "pending", icon: "📖", teacherNote: "Letter sound 'S' and 'A' practice." },
-        { id: "act-5", time: "05:30 PM", title: "Solar System Coloring Task", subject: "Homework", status: "due-today", icon: "🪐", teacherNote: "Identify 3 primary planets with stickers." }
-      ],
-      homework: [
-        {
-          id: "hw-1",
-          subject: "Mathematics",
-          title: "Algebra & Number Tracing (1-10)",
-          teacher: "Ms. Sarah",
-          dueDate: "Today · 6:00 PM",
-          status: "in-progress",
-          priority: "High Priority",
-          priorityColor: "bg-rose-100 text-rose-700 border-rose-200",
-          progress: 60,
-          description: "Trace numbers 1 through 10 using tactile crayons. Count 5 fruit blocks and place stickers on worksheet Page 4.",
-          materials: ["Tactile Number Chart", "Sticker Sheet #2"]
-        },
-        {
-          id: "hw-2",
-          subject: "Science",
-          title: "Solar System Planet Matching",
-          teacher: "Mr. David",
-          dueDate: "Tomorrow · 4:00 PM",
-          status: "pending",
-          priority: "Normal",
-          priorityColor: "bg-blue-100 text-blue-700 border-blue-200",
-          progress: 0,
-          description: "Match Earth, Mars, and the Sun stickers into the correct orbits on the solar map provided in the learning kit.",
-          materials: ["Planet Stickers", "Galaxy Map 3B"]
-        },
-        {
-          id: "hw-3",
-          subject: "English Reading",
-          title: "Rhyming Words & Letter Sounds",
-          teacher: "Ms. Emily",
-          dueDate: "Friday · 5:00 PM",
-          status: "pending",
-          priority: "Normal",
-          priorityColor: "bg-amber-100 text-amber-700 border-amber-200",
-          progress: 20,
-          description: "Read aloud 'Sam the Cat' 3 times with parent and identify three words that rhyme with 'Hat'.",
-          materials: ["Storybook Level 1", "Audio Phonics QR"]
-        },
-        {
-          id: "hw-4",
-          subject: "Art & Sensory",
-          title: "Nature Leaf Collage Project",
-          teacher: "Ms. Sarah",
-          dueDate: "Yesterday",
-          status: "completed",
-          priority: "Completed",
-          priorityColor: "bg-emerald-100 text-emerald-700 border-emerald-200",
-          progress: 100,
-          description: "Collect 4 fallen dry leaves and paste them into the butterfly silhouette.",
-          materials: ["Butterfly Canvas", "Safe Glue Stick"]
-        }
-      ],
-      upcoming: [
-        { day: "Tomorrow", time: "10:00 AM", title: "STEAM Science Mini Project", subject: "Science" },
-        { day: "Thursday", time: "04:30 PM", title: "Phonics Reading & Puppet Circle", subject: "Language" },
-        { day: "Friday", time: "09:30 AM", title: "Campus Sports Day & Sprint", subject: "Physical Activity" },
-        { day: "Next Mon", time: "10:00 AM", title: "Botanical Garden Discovery Trip", subject: "Field Trip" }
-      ],
-      teacherFeedback: {
-        teacher: "Teacher Sarah Jenkins",
-        date: "Today at 11:15 AM",
-        avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
-        message: "Ananya did fantastic in today's block assembly! She helped her peer assemble the toy bridge with wonderful patience."
-      }
-    },
-    vihaan: {
-      id: "vihaan",
-      name: "Vihaan Sharma",
-      avatarEmoji: "👦",
-      avatarBg: "from-cyan-400 to-blue-500",
-      grade: "UKG Explorers",
-      campusId: "VW-2026-9041",
-      teacher: "Mr. Robert Lee",
-      attendance: "96%",
-      overallProgress: 88,
-      homeworkCompletion: 95,
-      insight: "Superb analytical skills in Junior Coding and robotics mazes this week!",
-      activities: [
-        { id: "v-act-1", time: "08:30 AM", title: "Lego Robotics Logic Lab", subject: "STEAM", status: "completed", icon: "🤖", teacherNote: "Built 4-wheel gear vehicle." },
-        { id: "v-act-2", time: "10:30 AM", title: "Advanced Phonics Reading", subject: "English", status: "completed", icon: "📚", teacherNote: "Read full 10-page reader aloud." },
-        { id: "v-act-3", time: "01:00 PM", title: "Farm Table Lunch & Nutrition", subject: "Dining", status: "completed", icon: "🍲", teacherNote: "Finished quinoa bowl and fruit." },
-        { id: "v-act-4", time: "03:30 PM", title: "Mental Math & Pattern Sprint", subject: "Math", status: "in-progress", icon: "🧮", teacherNote: "Solving 2-digit additions." },
-        { id: "v-act-5", time: "06:00 PM", title: "Planets & Space Habitat Model", subject: "Homework", status: "due-today", icon: "🚀", teacherNote: "Submit cardboard space rover." }
-      ],
-      homework: [
-        {
-          id: "v-hw-1",
-          subject: "Mathematics",
-          title: "Two-Digit Addition & Pattern Mazes",
-          teacher: "Mr. Robert",
-          dueDate: "Today · 6:30 PM",
-          status: "in-progress",
-          priority: "High Priority",
-          priorityColor: "bg-rose-100 text-rose-700 border-rose-200",
-          progress: 80,
-          description: "Complete exercises 1 to 15 on addition with number lines on Math Workbook Vol 2.",
-          materials: ["Math Workbook 2", "Number Ruler"]
-        },
-        {
-          id: "v-hw-2",
-          subject: "Science & Robotics",
-          title: "Simple Circuit Diagram Sketch",
-          teacher: "Dr. Paul",
-          dueDate: "Tomorrow · 5:00 PM",
-          status: "pending",
-          priority: "Normal",
-          priorityColor: "bg-blue-100 text-blue-700 border-blue-200",
-          progress: 10,
-          description: "Draw battery, switch, and LED light bulb connection with colored pencils.",
-          materials: ["Junior STEAM Sketchpad"]
-        }
-      ],
-      upcoming: [
-        { day: "Tomorrow", time: "11:00 AM", title: "Junior Coding Challenge", subject: "STEAM" },
-        { day: "Thursday", time: "03:00 PM", title: "Creative Storyboarding", subject: "Language" },
-        { day: "Friday", time: "10:00 AM", title: "Campus Football Tournament", subject: "Sports" }
-      ],
-      teacherFeedback: {
-        teacher: "Mr. Robert Lee",
-        date: "Today at 01:45 PM",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
-        message: "Vihaan scored 100% on his phonics reading challenge today! He is showing great leadership in group robotics."
-      }
-    }
-  });
+  // Dynamic Children Data loaded strictly from real database
+  const [childrenData, setChildrenData] = useState({});
 
   // Live Cameras Data
   const cameras = {
@@ -216,47 +72,59 @@ export default function ParentPortal({ isModal = false, onClose }) {
     cam4: { name: "Organic Dining Suite", status: "STANDBY", viewers: 0, icon: "🍎" }
   };
 
-  // Live Data Fetching & Multi-Channel Real-time Sync ("Nuclear Option")
-  const loadLivePortalData = () => {
-    fetch(`/api/portal/data?t=${Date.now()}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.childrenData && Object.keys(data.childrenData).length > 0) {
-          setChildrenData(data.childrenData);
-          setActiveChildId((prev) => (data.childrenData[prev] ? prev : Object.keys(data.childrenData)[0]));
-        }
-      })
-      .catch((err) => console.error("Error loading portal live data:", err));
+  // Live Data Fetching & Multi-Channel Real-time Sync for the logged-in parent
+  const loadLivePortalData = async (emailOverride) => {
+    const targetEmail = (emailOverride || loggedParentEmail || "").trim().toLowerCase();
+    if (!targetEmail) return;
+
+    try {
+      const res = await fetch(`/api/portal/data?email=${encodeURIComponent(targetEmail)}&t=${Date.now()}`);
+      const data = await res.json();
+      const map = data.childrenData || {};
+      setChildrenData(map);
+      const childIds = Object.keys(map);
+      if (childIds.length > 0) {
+        setActiveChildId((prev) => (map[prev] ? prev : childIds[0]));
+      } else {
+        setActiveChildId("");
+      }
+    } catch (err) {
+      console.error("Error loading portal live data:", err);
+    }
   };
 
   useEffect(() => {
-    loadLivePortalData();
+    if (loggedParentEmail) {
+      loadLivePortalData(loggedParentEmail);
+    }
 
     // 1. BroadcastChannel for instant 0ms cross-tab sync from Teacher/Admin panel
     let channel;
     try {
       channel = new BroadcastChannel('vannam_store_sync');
       channel.onmessage = () => {
-        loadLivePortalData();
+        if (loggedParentEmail) loadLivePortalData(loggedParentEmail);
       };
     } catch {}
 
     // 2. LocalStorage trigger across separate windows
     const handleStorage = (e) => {
-      if (e.key === 'vannam_sync_trigger') {
-        loadLivePortalData();
+      if (e.key === 'vannam_sync_trigger' && loggedParentEmail) {
+        loadLivePortalData(loggedParentEmail);
       }
     };
     window.addEventListener('storage', handleStorage);
 
     // 3. Focus trigger
     const handleFocus = () => {
-      loadLivePortalData();
+      if (loggedParentEmail) loadLivePortalData(loggedParentEmail);
     };
     window.addEventListener('focus', handleFocus);
 
-    // 4. Background heartbeat polling (every 4 seconds)
-    const heartbeat = setInterval(loadLivePortalData, 4000);
+    // 4. Background heartbeat polling (every 5 seconds)
+    const heartbeat = setInterval(() => {
+      if (loggedParentEmail) loadLivePortalData(loggedParentEmail);
+    }, 5000);
 
     return () => {
       if (channel) channel.close();
@@ -264,30 +132,34 @@ export default function ParentPortal({ isModal = false, onClose }) {
       window.removeEventListener('focus', handleFocus);
       clearInterval(heartbeat);
     };
-  }, []);
+  }, [loggedParentEmail]);
 
-  const currentChild = childrenData[activeChildId] || Object.values(childrenData)[0] || {
-    id: "default",
-    name: "Preschool Learner",
-    avatarEmoji: "🎒",
-    avatarBg: "from-cyan-400 to-blue-500",
-    grade: "Preschool Group",
-    campusId: "VW-2026-001",
-    teacher: "Teacher Lead",
-    attendance: "98%",
-    todayStatus: "PRESENT",
-    overallProgress: 85,
-    homeworkCompletion: 90,
-    insight: "Happy and productive classroom participation today!",
-    activities: [],
-    homework: []
-  };
+  const currentChild = (activeChildId && childrenData[activeChildId]) 
+    ? childrenData[activeChildId] 
+    : (Object.values(childrenData)[0] || {
+        id: "default",
+        name: "Preschool Learner",
+        avatarEmoji: "🎒",
+        avatarBg: "from-cyan-400 to-blue-500",
+        grade: "Preschool Group",
+        campusId: "VW-2026-001",
+        teacher: "Teacher Lead",
+        attendance: "0%",
+        todayStatus: "ABSENT",
+        overallProgress: 0,
+        homeworkCompletion: 0,
+        insight: "Welcome to Vannam World!",
+        activities: [],
+        homework: []
+      });
 
   // Calculate Progress Stats Dynamically
   const childActivities = currentChild.activities || [];
   const completedActivitiesCount = childActivities.filter(a => a.status === "completed").length;
   const totalActivitiesCount = childActivities.length || 1;
-  const todayProgressPercent = Math.round((completedActivitiesCount / totalActivitiesCount) * 100);
+  const todayProgressPercent = childActivities.length > 0 
+    ? Math.round((completedActivitiesCount / totalActivitiesCount) * 100) 
+    : 0;
 
   // Filtered Activities
   const filteredActivities = childActivities.filter(act => {
@@ -296,17 +168,18 @@ export default function ParentPortal({ isModal = false, onClose }) {
     return true;
   });
 
-  // Handle Parent Login with Neon DB verification
+  // Handle Parent Login with verification
   const handleNeonLogin = async (e) => {
     if (e) e.preventDefault();
     setIsLoggingIn(true);
     setLoginError("");
 
     try {
+      const cleanEmail = (loginEmail || "").trim().toLowerCase();
       const res = await fetch("/api/portal/auth", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: loginEmail, pin: loginPin })
+        body: JSON.stringify({ email: cleanEmail, pin: loginPin })
       });
 
       const data = await res.json();
@@ -318,26 +191,16 @@ export default function ParentPortal({ isModal = false, onClose }) {
       }
 
       // Valid credentials verified
-      setIsLoggingIn(false);
+      setLoggedParentName(data.parentName || "Parent");
+      setLoggedParentEmail(cleanEmail);
 
-      if (data.matchedChildId && childrenData[data.matchedChildId]) {
+      // Fetch live children records for this authenticated parent
+      await loadLivePortalData(cleanEmail);
+      if (data.matchedChildId) {
         setActiveChildId(data.matchedChildId);
-      } else {
-        const query = (loginEmail || "").trim().toLowerCase();
-        const matchedChild = Object.values(childrenData).find(
-          (c) =>
-            c.parentEmail?.toLowerCase() === query ||
-            c.studentId?.toLowerCase() === query ||
-            c.name?.toLowerCase().includes(query) ||
-            c.parentPhone?.includes(query)
-        );
-        if (matchedChild) {
-          setActiveChildId(matchedChild.id);
-        } else if (Object.keys(childrenData).length > 0) {
-          setActiveChildId(Object.keys(childrenData)[0]);
-        }
       }
 
+      setIsLoggingIn(false);
       setIsAuthenticated(true);
       confetti({ particleCount: 60, spread: 60, origin: { y: 0.6 } });
     } catch (err) {
@@ -347,12 +210,15 @@ export default function ParentPortal({ isModal = false, onClose }) {
   };
 
   // Toggle Activity Status
-  const handleToggleActivity = (actId) => {
+  const handleToggleActivity = async (actId) => {
+    let nextStatus = "completed";
     setChildrenData(prev => {
-      const child = prev[activeChildId];
-      const updatedActivities = child.activities.map(act => {
+      const child = prev[activeChildId] || Object.values(prev)[0];
+      if (!child) return prev;
+      const targetId = child.id || activeChildId;
+      const updatedActivities = (child.activities || []).map(act => {
         if (act.id === actId) {
-          const nextStatus = act.status === "completed" ? "pending" : "completed";
+          nextStatus = act.status === "completed" ? "pending" : "completed";
           if (nextStatus === "completed") {
             confetti({ particleCount: 40, spread: 50, origin: { y: 0.7 } });
           }
@@ -362,33 +228,94 @@ export default function ParentPortal({ isModal = false, onClose }) {
       });
       return {
         ...prev,
-        [activeChildId]: { ...child, activities: updatedActivities }
+        [targetId]: { ...child, activities: updatedActivities }
       };
     });
+
+    try {
+      const currentChildId = activeChildId || Object.keys(childrenData)[0];
+      await fetch('/api/portal/activities', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          activityId: actId,
+          studentId: currentChildId,
+          status: nextStatus
+        })
+      });
+    } catch (err) {
+      console.error("Failed to sync activity status:", err);
+    }
   };
 
   // Toggle Homework Status
-  const handleToggleHomework = (hwId) => {
+  const handleToggleHomework = async (hwId) => {
+    let nextStatus = "completed";
     setChildrenData(prev => {
-      const child = prev[activeChildId];
-      const updatedHw = child.homework.map(hw => {
+      const child = prev[activeChildId] || Object.values(prev)[0];
+      if (!child) return prev;
+      const targetId = child.id || activeChildId;
+      const updatedHw = (child.homework || []).map(hw => {
         if (hw.id === hwId) {
           const isDone = hw.status === "completed";
-          const newStatus = isDone ? "pending" : "completed";
+          nextStatus = isDone ? "pending" : "completed";
           const newProgress = isDone ? 20 : 100;
           if (!isDone) {
             confetti({ particleCount: 70, spread: 60, origin: { y: 0.5 } });
           }
-          return { ...hw, status: newStatus, progress: newProgress };
+          return {
+            ...hw,
+            status: nextStatus,
+            progress: newProgress,
+            priority: nextStatus === "completed" ? "Completed" : "High Priority",
+            priorityColor: nextStatus === "completed"
+              ? "bg-emerald-100 text-emerald-700 border-emerald-200"
+              : "bg-rose-100 text-rose-700 border-rose-200"
+          };
         }
         return hw;
       });
+
+      const completedCount = updatedHw.filter(h => h.status === "completed").length;
+      const hwTotal = updatedHw.length || 1;
+      const hwPercent = Math.round((completedCount / hwTotal) * 100);
+
       return {
         ...prev,
-        [activeChildId]: { ...child, homework: updatedHw }
+        [targetId]: { ...child, homework: updatedHw, homeworkCompletion: hwPercent }
       };
     });
-    setSelectedHomework(null);
+
+    // Update selectedHomework in modal if open
+    setSelectedHomework(prev => {
+      if (!prev || prev.id !== hwId) return prev;
+      const isDone = prev.status === "completed";
+      const toggled = isDone ? "pending" : "completed";
+      return {
+        ...prev,
+        status: toggled,
+        progress: toggled === "completed" ? 100 : 20,
+        priority: toggled === "completed" ? "Completed" : "High Priority",
+        priorityColor: toggled === "completed"
+          ? "bg-emerald-100 text-emerald-700 border-emerald-200"
+          : "bg-rose-100 text-rose-700 border-rose-200"
+      };
+    });
+
+    try {
+      const currentChildId = activeChildId || Object.keys(childrenData)[0];
+      await fetch('/api/portal/homework', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          homeworkId: hwId,
+          studentId: currentChildId,
+          status: nextStatus
+        })
+      });
+    } catch (err) {
+      console.error("Failed to sync homework status:", err);
+    }
   };
 
   // Download PDF Report
@@ -565,12 +492,96 @@ export default function ParentPortal({ isModal = false, onClose }) {
   }
 
   // =========================================================================
-  // 2. COMPACT, NEAT & SCANNABLE PARENT DASHBOARD
+  // 2. EMPTY STATE: AUTHENTICATED PARENT WITH NO ENROLLED CHILDREN YET
+  // =========================================================================
+  if (Object.keys(childrenData).length === 0) {
+    return (
+      <div className={`w-full bg-[#F8FAFC] text-[#0F2963] ${isModal ? "p-3 sm:p-5 max-w-5xl mx-auto rounded-3xl" : "min-h-screen p-3 sm:p-5 lg:p-6"}`}>
+        
+        {/* Top Header */}
+        <header className="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 to-rose-400 text-white flex items-center justify-center font-black text-lg shadow-xs">
+              {(loggedParentName || 'P').charAt(0).toUpperCase()}
+            </div>
+            <div>
+              <h2 className="font-heading font-black text-base sm:text-lg text-[#0F2963] leading-tight">
+                Welcome, {loggedParentName || 'Parent'}
+              </h2>
+              <p className="text-xs text-slate-500 font-mono mt-0.5">{loggedParentEmail}</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => {
+                setIsAuthenticated(false);
+                setChildrenData({});
+                setLoggedParentEmail("");
+                setLoggedParentName("");
+                setLoginPin("");
+              }}
+              className="px-3.5 py-2 rounded-xl border border-slate-200 hover:border-rose-300 text-slate-600 hover:text-rose-600 text-xs font-bold transition flex items-center gap-1.5 cursor-pointer bg-white shadow-2xs"
+            >
+              <LogOut className="w-3.5 h-3.5" />
+              <span>Sign Out</span>
+            </button>
+            {isModal && onClose && (
+              <button
+                onClick={onClose}
+                className="p-2 rounded-xl bg-[#0F2963] text-white hover:bg-[#1E3A8A] transition cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+        </header>
+
+        {/* Clean Empty State Card */}
+        <div className="bg-white rounded-3xl border border-slate-200/80 p-8 sm:p-12 text-center max-w-lg mx-auto shadow-sm space-y-4 my-8">
+          <div className="w-16 h-16 rounded-2xl bg-[#00A8E8]/10 text-[#00A8E8] flex items-center justify-center mx-auto shadow-inner">
+            <GraduationCap className="w-8 h-8" />
+          </div>
+          <h3 className="font-heading font-black text-xl text-[#0F2963]">
+            No Enrolled Student Linked Yet
+          </h3>
+          <p className="text-xs text-slate-500 leading-relaxed max-w-md mx-auto">
+            Your Parent Portal account is authenticated and active. However, there are currently no active students enrolled under <span className="font-bold text-slate-700">{loggedParentEmail}</span>.
+          </p>
+
+          <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-left text-xs text-slate-600 space-y-1.5">
+            <div className="font-bold text-slate-800 flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4 text-[#F59E0B]" /> What happens next?
+            </div>
+            <p className="text-[11px] text-slate-500 leading-relaxed">
+              Once the school office admits and registers your child in the classroom rosters, their daily routine, attendance, homework, and live camera feeds will automatically appear on this dashboard.
+            </p>
+          </div>
+
+          <div className="pt-2">
+            <a
+              href="/#contact"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#0F2963] hover:bg-[#00A8E8] text-white text-xs font-bold shadow-md transition cursor-pointer"
+            >
+              <span>Contact Admissions Office</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+
+      </div>
+    );
+  }
+
+  // =========================================================================
+  // 3. COMPACT, NEAT & SCANNABLE PARENT DASHBOARD
   // =========================================================================
 
   const parentFirstName = currentChild.parentName?.split(' ')[0] || 'Parent';
   const childFirstName = currentChild.name?.split(' ')[0] || 'Learner';
-  const isPresent = currentChild.todayStatus !== 'ABSENT';
+  const isNewStudent = currentChild.isNewStudent === true;
+  const isPresent = currentChild.todayStatus !== 'ABSENT' && currentChild.todayStatus !== 'NOT_MARKED';
+  const isNotMarked = currentChild.todayStatus === 'NOT_MARKED';
   const pendingHw = (currentChild.homework || []).filter(h => h.status !== 'completed');
   const completedHw = (currentChild.homework || []).filter(h => h.status === 'completed');
 
@@ -592,12 +603,14 @@ export default function ParentPortal({ isModal = false, onClose }) {
                   {currentChild.name}
                 </h1>
                 <span className={`inline-flex items-center gap-1 text-[10px] font-extrabold px-2 py-0.5 rounded-full border ${
-                  isPresent 
+                  isNotMarked
+                    ? 'bg-slate-50 text-slate-500 border-slate-200'
+                    : isPresent 
                     ? 'bg-emerald-50 text-emerald-700 border-emerald-200' 
                     : 'bg-rose-50 text-rose-700 border-rose-200'
                 }`}>
-                  <span className={`w-1.5 h-1.5 rounded-full ${isPresent ? 'bg-emerald-500 animate-pulse' : 'bg-rose-500'}`} />
-                  {isPresent ? 'In Campus Today' : 'Absent'}
+                  <span className={`w-1.5 h-1.5 rounded-full ${isNotMarked ? 'bg-slate-400' : isPresent ? 'bg-emerald-500 animate-pulse' : 'bg-rose-500'}`} />
+                  {isNotMarked ? 'Awaiting Check-in' : isPresent ? 'In Campus Today' : 'Absent'}
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 font-medium truncate mt-0.5">
@@ -712,12 +725,12 @@ export default function ParentPortal({ isModal = false, onClose }) {
           <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 flex items-center gap-1 mb-1">
             <CheckCircle2 className="w-3 h-3 text-emerald-500" /> Attendance
           </span>
-          <div className="text-base sm:text-lg font-black text-emerald-600 leading-tight">
-            {currentChild.attendance || "98.5%"}
+          <div className={`text-base sm:text-lg font-black leading-tight ${isNewStudent ? 'text-slate-400' : 'text-emerald-600'}`}>
+            {currentChild.attendance || '0%'}
           </div>
           <p className="text-[10px] font-semibold text-slate-400 mt-2 flex items-center gap-1 truncate">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            Present & On Time
+            <span className={`w-1.5 h-1.5 rounded-full ${isNewStudent ? 'bg-slate-300' : 'bg-emerald-500'}`} />
+            {isNewStudent ? 'Tracking begins soon' : 'Present & On Time'}
           </p>
         </div>
 
@@ -726,11 +739,11 @@ export default function ParentPortal({ isModal = false, onClose }) {
           <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 flex items-center gap-1 mb-1">
             <BookOpen className="w-3 h-3 text-amber-500" /> Homework
           </span>
-          <div className="text-base sm:text-lg font-black text-amber-600 leading-tight">
-            {pendingHw.length} <span className="text-xs font-semibold text-slate-400">Pending</span>
+          <div className={`text-base sm:text-lg font-black leading-tight ${isNewStudent ? 'text-slate-400' : 'text-amber-600'}`}>
+            {pendingHw.length} <span className="text-xs font-semibold text-slate-400">{isNewStudent ? 'Assigned' : 'Pending'}</span>
           </div>
           <p className="text-[10px] font-semibold text-slate-400 mt-2 truncate">
-            {completedHw.length} completed this week
+            {isNewStudent ? 'Will appear when assigned' : pendingHw.length === 0 ? 'All tasks completed ✨' : `${completedHw.length} completed this week`}
           </p>
         </div>
 
@@ -739,11 +752,11 @@ export default function ParentPortal({ isModal = false, onClose }) {
           <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 flex items-center gap-1 mb-1">
             <Award className="w-3 h-3 text-[#8B5CF6]" /> Term Progress
           </span>
-          <div className="text-base sm:text-lg font-black text-[#8B5CF6] leading-tight">
-            {currentChild.overallProgress || "92%"}
+          <div className={`text-base sm:text-lg font-black leading-tight ${isNewStudent ? 'text-slate-400' : 'text-[#8B5CF6]'}`}>
+            {isNewStudent ? '0%' : (typeof currentChild.overallProgress === 'number' ? `${currentChild.overallProgress}%` : (currentChild.overallProgress || '0%'))}
           </div>
           <p className="text-[10px] font-semibold text-slate-400 mt-2 truncate">
-            Exceeding learning goals
+            {isNewStudent ? 'Just started 🌱' : 'Exceeding learning goals'}
           </p>
         </div>
 
@@ -793,8 +806,16 @@ export default function ParentPortal({ isModal = false, onClose }) {
             {/* Activities List */}
             <div className="divide-y divide-slate-100">
               {filteredActivities.length === 0 ? (
-                <div className="p-6 text-center text-xs text-slate-400">
-                  No activities found for this filter.
+                <div className="p-8 text-center text-xs text-slate-400">
+                  <div className="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-100 text-[#00A8E8] flex items-center justify-center mx-auto mb-3 text-xl shadow-xs">
+                    🌟
+                  </div>
+                  <p className="font-bold text-slate-600 text-sm">No routine activities scheduled yet</p>
+                  <p className="text-[11px] text-slate-400 mt-1 max-w-xs mx-auto">
+                    {isNewStudent
+                      ? "Welcome! Daily schedule, activities, and teacher milestone updates will appear here when class begins."
+                      : "No scheduled routine items recorded for today."}
+                  </p>
                 </div>
               ) : (
                 filteredActivities.map((act) => {
@@ -892,13 +913,30 @@ export default function ParentPortal({ isModal = false, onClose }) {
                   Assignments designed for developmental curiosity and creative expression.
                 </p>
               </div>
-              <span className="text-[11px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full">
+              <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${
+                pendingHw.length === 0
+                  ? "bg-slate-50 text-slate-500 border-slate-200"
+                  : "bg-amber-50 text-amber-700 border-amber-200"
+              }`}>
                 {pendingHw.length} Pending
               </span>
             </div>
 
             <div className="divide-y divide-slate-100">
-              {(currentChild.homework || []).map((hw) => {
+              {(currentChild.homework || []).length === 0 ? (
+                <div className="p-8 text-center text-xs text-slate-400">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-100 text-amber-500 flex items-center justify-center mx-auto mb-3 text-xl shadow-xs">
+                    📚
+                  </div>
+                  <p className="font-bold text-slate-600 text-sm">No homework tasks assigned yet</p>
+                  <p className="text-[11px] text-slate-400 mt-1 max-w-xs mx-auto">
+                    {isNewStudent
+                      ? "Fresh start! Assignments from educators will appear here once classroom sessions begin."
+                      : "All caught up! No pending homework tasks right now."}
+                  </p>
+                </div>
+              ) : (
+                (currentChild.homework || []).map((hw) => {
                 const isCompleted = hw.status === "completed";
 
                 return (
@@ -970,7 +1008,8 @@ export default function ParentPortal({ isModal = false, onClose }) {
                     </div>
                   </div>
                 );
-              })}
+              })
+            )}
             </div>
           </section>
 
@@ -1013,25 +1052,7 @@ export default function ParentPortal({ isModal = false, onClose }) {
             </div>
           </section>
 
-          {/* 3. QUICK SHORTCUT ACTIONS */}
-          <div className="grid grid-cols-2 gap-2.5">
-            <button
-              onClick={handleDownloadPDF}
-              className="p-3 rounded-2xl bg-white border border-slate-200 hover:border-[#00A8E8] text-center transition-all shadow-xs hover:-translate-y-0.5 cursor-pointer group"
-            >
-              <Download className="w-4 h-4 text-[#00A8E8] mx-auto mb-1 group-hover:scale-110 transition-transform" />
-              <span className="text-[11px] font-extrabold text-[#0F2963] block">Download PDF</span>
-              <span className="text-[9px] text-slate-400 block">Daily Report</span>
-            </button>
-            <button
-              onClick={() => setIsLiveCamOpen(true)}
-              className="p-3 rounded-2xl bg-white border border-slate-200 hover:border-emerald-500 text-center transition-all shadow-xs hover:-translate-y-0.5 cursor-pointer group"
-            >
-              <Camera className="w-4 h-4 text-emerald-600 mx-auto mb-1 group-hover:scale-110 transition-transform" />
-              <span className="text-[11px] font-extrabold text-[#0F2963] block">Live Classroom</span>
-              <span className="text-[9px] text-slate-400 block">4K Safe Stream</span>
-            </button>
-          </div>
+
 
         </div>
 
@@ -1078,7 +1099,7 @@ export default function ParentPortal({ isModal = false, onClose }) {
                 Required Materials:
               </span>
               <div className="flex flex-wrap gap-1.5">
-                {selectedHomework.materials.map((mat, i) => (
+                {(Array.isArray(selectedHomework.materials) ? selectedHomework.materials : [selectedHomework.materials || 'Montessori Worksheet']).map((mat, i) => (
                   <span key={i} className="px-2.5 py-1 rounded-lg bg-amber-50 border border-amber-200 text-xs font-medium text-slate-700 flex items-center gap-1">
                     📦 {mat}
                   </span>
@@ -1096,7 +1117,7 @@ export default function ParentPortal({ isModal = false, onClose }) {
               }`}
             >
               <CheckCircle className="w-4 h-4" />
-              <span>{selectedHomework.status === "completed" ? "Mark Incomplete" : "Mark as Completed ✓"}</span>
+              <span>{selectedHomework.status === "completed" ? "Mark Incomplete" : "Mark as Completed"}</span>
             </button>
           </div>
         </div>
