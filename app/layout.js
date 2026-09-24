@@ -18,7 +18,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://vannamworldpreschool.com"),
+  metadataBase: new URL("https://vannamworld.in"),
   title: {
     default: "Vannam World Preschool | Best Montessori, STEAM & Daycare Playschool",
     template: "%s | Vannam World Preschool",
@@ -37,7 +37,7 @@ export const metadata = {
     "preschool admissions",
     "early child development center"
   ],
-  authors: [{ name: "Vannam World Preschool", url: "https://vannamworldpreschool.com" }],
+  authors: [{ name: "Vannam World Preschool", url: "https://vannamworld.in" }],
   creator: "Vannam World Preschool",
   publisher: "Vannam World Preschool",
   applicationName: "Vannam World Preschool",
@@ -51,7 +51,7 @@ export const metadata = {
   openGraph: {
     title: "Vannam World Preschool | Award-Winning Early Childhood & Montessori Education",
     description: "Nurturing curious young minds with STEAM Montessori curricula, certified teachers, organic chef meals, and real-time parent portal app.",
-    url: "https://vannamworldpreschool.com",
+    url: "https://vannamworld.in",
     siteName: "Vannam World Preschool",
     locale: "en_US",
     type: "website",
@@ -76,7 +76,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://vannamworldpreschool.com",
+    canonical: "https://vannamworld.in",
   },
   verification: {
     google: "google-site-verification-token",
@@ -97,19 +97,19 @@ export default function RootLayout({ children }) {
     "@graph": [
       {
         "@type": ["EducationalOrganization", "Preschool", "ChildCare"],
-        "@id": "https://vannamworldpreschool.com/#organization",
+        "@id": "https://vannamworld.in/#organization",
         "name": "Vannam World Preschool",
         "alternateName": ["Vannam Preschool", "Vannam Playschool", "Vannam World Daycare"],
-        "url": "https://vannamworldpreschool.com",
+        "url": "https://vannamworld.in",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://vannamworldpreschool.com/favicon.ico",
+          "url": "https://vannamworld.in/favicon.ico",
           "caption": "Vannam World Preschool Logo"
         },
-        "image": "https://vannamworldpreschool.com/favicon.ico",
+        "image": "https://vannamworld.in/favicon.ico",
         "description": "Leading Montessori and STEAM preschool delivering progressive early childhood education with certified teachers, 4K live streaming, and organic chef nutrition.",
         "telephone": "+91-78100-87310",
-        "email": "admissions@vannamworldpreschool.com",
+        "email": "admissions@vannamworld.in",
         "priceRange": "₹₹",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Credit Card, Direct Debit, UPI, Online Banking",
@@ -187,21 +187,64 @@ export default function RootLayout({ children }) {
       },
       {
         "@type": "WebSite",
-        "@id": "https://vannamworldpreschool.com/#website",
-        "url": "https://vannamworldpreschool.com",
+        "@id": "https://vannamworld.in/#website",
+        "url": "https://vannamworld.in",
         "name": "Vannam World Preschool",
         "publisher": {
-          "@id": "https://vannamworldpreschool.com/#organization"
+          "@id": "https://vannamworld.in/#organization"
         },
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://vannamworldpreschool.com/programs?q={search_term_string}",
+          "target": "https://vannamworld.in/programs?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },
       {
+        "@type": "SiteNavigationElement",
+        "@id": "https://vannamworld.in/#navigation",
+        "name": "Main Navigation",
+        "hasPart": [
+          {
+            "@type": "WebPage",
+            "name": "Programs",
+            "description": "Toddler, Playgroup, Nursery, and Kindergarten STEAM & Montessori curriculum",
+            "url": "https://vannamworld.in/programs"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Admissions",
+            "description": "Fee structure, enrollment schedule, and application process",
+            "url": "https://vannamworld.in/admissions"
+          },
+          {
+            "@type": "WebPage",
+            "name": "About Us",
+            "description": "Our educational philosophy, founder story, and certified educators",
+            "url": "https://vannamworld.in/about"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Safety & Care",
+            "description": "4K live streaming, child-proof campus, and pediatric medical protocols",
+            "url": "https://vannamworld.in/safety"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Gallery",
+            "description": "Campus facilities, classroom activities, outdoor play areas, and events",
+            "url": "https://vannamworld.in/gallery"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Contact & Visit",
+            "description": "Schedule a campus tour, get directions, and call our admissions office",
+            "url": "https://vannamworld.in/contact"
+          }
+        ]
+      },
+      {
         "@type": "FAQPage",
-        "@id": "https://vannamworldpreschool.com/#faq",
+        "@id": "https://vannamworld.in/#faq",
         "mainEntity": [
           {
             "@type": "Question",

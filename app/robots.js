@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/private/', '/api/'],
     },
-    sitemap: 'https://vannamworldpreschool.com/sitemap.xml',
+    sitemap: 'https://vannamworld.in/sitemap.xml',
   };
 }

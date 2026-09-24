@@ -208,7 +208,7 @@ export default function ContactClient() {
               <div className="w-9 h-9 rounded-xl bg-[#00A8E8]/10 text-[#00A8E8] flex items-center justify-center">
                 <Mail className="w-4 h-4" />
               </div>
-              <span className="break-all">admissions@vannamworldpreschool.com</span>
+              <span className="break-all">admissions@vannamworld.in</span>
             </div>
           </div>
         </div>

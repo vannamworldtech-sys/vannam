@@ -3,12 +3,12 @@ export const metadata = {
   description: "Learn about our gold standard child safety measures: 4K encrypted parent live stream, biometric security gates, certified pediatric nurse, and HEPA sanitization.",
   keywords: ["preschool safety", "live streaming daycare", "biometric campus security", "safe preschool", "pediatric nurse on campus", "UV toy sanitization"],
   alternates: {
-    canonical: "https://vannamworldpreschool.com/safety",
+    canonical: "https://vannamworld.in/safety",
   },
   openGraph: {
     title: "5-Star Certified Child Safety Protocols | Vannam World Preschool",
     description: "Bank-grade encrypted live camera streaming, pediatric medical care, and biometric pickup verification.",
-    url: "https://vannamworldpreschool.com/safety",
+    url: "https://vannamworld.in/safety",
   },
 };
 

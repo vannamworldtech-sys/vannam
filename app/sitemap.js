@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://vannamworldpreschool.com';
+  const baseUrl = 'https://vannamworld.in';
   const lastModified = new Date();
 
   return [
