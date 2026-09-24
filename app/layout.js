@@ -79,7 +79,7 @@ export const metadata = {
     canonical: "https://vannamworld.in",
   },
   verification: {
-    google: "google-site-verification-token",
+    google: "5d2cc42976f4151c",
   },
 };
 
